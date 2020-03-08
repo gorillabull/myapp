@@ -1,0 +1,4 @@
+#Sat Mar 07 17:00:44 PST 2020
+base.0=/home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/build/intermediates/dex/debug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
