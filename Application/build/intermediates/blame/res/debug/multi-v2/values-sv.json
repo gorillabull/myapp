@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sv/values-sv.xml",
+            "outputFile": "/home/leo/Documents/android/myapp/RecyclerView/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sv/values-sv.xml",
             "map": [
                 {
                     "source": "/home/leo/.gradle/caches/transforms-2/files-2.1/4e7b3bbed8e6e29e2ba6d4fc6e8eccff/support-compat-28.0.0/res/values-sv/values-sv.xml",

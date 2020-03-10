@@ -35,6 +35,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:label="act2" android:name="com.example.android.common.activities.activity2"/>
     </application>
 
 

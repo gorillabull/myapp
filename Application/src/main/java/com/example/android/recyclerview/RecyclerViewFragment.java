@@ -16,20 +16,25 @@
 
 package com.example.android.recyclerview;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
 
+import com.example.android.common.activities.activity2;
+import com.nightonke.boommenu.BoomButtons.BoomButton;
 import com.nightonke.boommenu.BoomButtons.ButtonPlaceEnum;
 import com.nightonke.boommenu.BoomButtons.SimpleCircleButton;
 import com.nightonke.boommenu.BoomMenuButton;
 import com.nightonke.boommenu.ButtonEnum;
+import com.nightonke.boommenu.OnBoomListener;
 import com.nightonke.boommenu.Piece.PiecePlaceEnum;
 
 /**
@@ -40,7 +45,7 @@ public class RecyclerViewFragment extends Fragment {
 
     private static final String TAG = "RecyclerViewFragment";
     private static final String KEY_LAYOUT_MANAGER = "layoutManager";
-    private static final int SPAN_COUNT = 6;
+    private static final int SPAN_COUNT = 4;
     private static final int DATASET_COUNT = 60;
 
     private enum LayoutManagerType {
@@ -100,6 +105,7 @@ public class RecyclerViewFragment extends Fragment {
         mRecyclerView.setAdapter(mAdapter);
         // END_INCLUDE(initializeRecyclerView)
 
+
         mLinearLayoutRadioButton = (RadioButton) rootView.findViewById(R.id.linear_layout_rb);
         mLinearLayoutRadioButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,20 +121,6 @@ public class RecyclerViewFragment extends Fragment {
                 setRecyclerViewLayoutManager(LayoutManagerType.GRID_LAYOUT_MANAGER);
             }
         });
-
-        //Boom Button.
-        boomMenuButton = (BoomMenuButton)rootView.findViewById(R.id.bmb);
-
-        try {
-            boomMenuButton.setButtonEnum(ButtonEnum.SimpleCircle);  //boom menu button style
-            boomMenuButton.setPiecePlaceEnum(PiecePlaceEnum.DOT_3_3);
-            boomMenuButton.setButtonPlaceEnum(ButtonPlaceEnum.SC_3_3);
-            for (int i =0; i < boomMenuButton.getButtonPlaceEnum().buttonNumber(); i++){
-                boomMenuButton.addBuilder(new SimpleCircleButton.Builder().normalImageRes(R.drawable.shape_oval_normal));
-            }
-        }catch (Exception e){
-
-        }
 
         return rootView;
     }
@@ -181,5 +173,12 @@ public class RecyclerViewFragment extends Fragment {
         for (int i = 0; i < DATASET_COUNT; i++) {
             mDataset[i] = "This is element #" + i;
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        Intent myIntent = new Intent(getContext(), RecyclerViewFragment.class);
+        startActivityForResult(myIntent, 0);
+        return true;
     }
 }

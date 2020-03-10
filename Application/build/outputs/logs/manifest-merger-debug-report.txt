@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:18:1-41:12
-INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:18:1-41:12
-INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:18:1-41:12
-INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:18:1-41:12
+ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:18:1-43:12
+INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:18:1-43:12
+INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:18:1-43:12
+INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:18:1-43:12
 MERGED from [com.nightonke:boommenu:2.1.1] /home/leo/.gradle/caches/transforms-2/files-2.1/eb07196ce157d418300d8ade5ce48815/boommenu-2.1.1/AndroidManifest.xml:2:1-16:12
 MERGED from [com.android.support:support-v13:28.0.0] /home/leo/.gradle/caches/transforms-2/files-2.1/4f4dd0b3e91a7288db2623513415d29d/support-v13-28.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:recyclerview-v7:24.0.0] /home/leo/.gradle/caches/transforms-2/files-2.1/4290cbd6710a791e743aff9c26323635/recyclerview-v7-24.0.0/AndroidManifest.xml:17:1-22:12
@@ -36,25 +36,25 @@ MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/leo/.gradle/caches/tr
 MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/leo/.gradle/caches/transforms-2/files-2.1/f33d666ad8cee70ee4e661f9bad8e372/livedata-1.1.1/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/leo/.gradle/caches/transforms-2/files-2.1/85526c118dcfe3eae0cf402e2cecc572/livedata-core-1.1.1/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] /home/leo/.gradle/caches/transforms-2/files-2.1/5853616defd81755613306a8befefe63/runtime-1.1.1/AndroidManifest.xml:17:1-22:12
-INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:18:1-41:12
-INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:18:1-41:12
-INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:18:1-41:12
+INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:18:1-43:12
+INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:18:1-43:12
+INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:18:1-43:12
 	package
-		ADDED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:19:5-47
-		INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml
-		INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml
+		ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:19:5-47
+		INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml
+		INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml
 	android:versionName
-		ADDED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:21:5-30
-		INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml
-		INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml
+		ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:21:5-30
+		INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml
+		INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:18:11-69
+		ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:18:11-69
 	android:versionCode
-		ADDED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:20:5-28
-		INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml
-		INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml
+		ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:20:5-28
+		INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml
+		INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml
 application
-ADDED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:25:5-38:19
+ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:25:5-40:19
 MERGED from [com.nightonke:boommenu:2.1.1] /home/leo/.gradle/caches/transforms-2/files-2.1/eb07196ce157d418300d8ade5ce48815/boommenu-2.1.1/AndroidManifest.xml:11:5-14:19
 MERGED from [com.nightonke:boommenu:2.1.1] /home/leo/.gradle/caches/transforms-2/files-2.1/eb07196ce157d418300d8ade5ce48815/boommenu-2.1.1/AndroidManifest.xml:11:5-14:19
 MERGED from [com.android.support:support-compat:28.0.0] /home/leo/.gradle/caches/transforms-2/files-2.1/4e7b3bbed8e6e29e2ba6d4fc6e8eccff/support-compat-28.0.0/AndroidManifest.xml:22:5-94
@@ -66,33 +66,39 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] /home/leo/.gradle/c
 	android:supportsRtl
 		ADDED from [com.nightonke:boommenu:2.1.1] /home/leo/.gradle/caches/transforms-2/files-2.1/eb07196ce157d418300d8ade5ce48815/boommenu-2.1.1/AndroidManifest.xml:13:9-35
 	android:label
-		ADDED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:26:9-41
+		ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:26:9-41
 	android:icon
-		ADDED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:27:9-45
+		ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:27:9-45
 	android:allowBackup
-		ADDED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:25:18-44
+		ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:25:18-44
 	android:theme
-		ADDED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:28:9-40
+		ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:28:9-40
 activity#com.example.android.recyclerview.MainActivity
-ADDED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:31:9-37:20
+ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:31:9-37:20
 	android:label
-		ADDED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:32:19-51
+		ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:32:19-51
 	android:name
-		ADDED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:31:19-47
+		ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:31:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:33:13-36:29
+ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:33:13-36:29
 action#android.intent.action.MAIN
-ADDED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:34:17-69
+ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:34:17-69
 	android:name
-		ADDED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:34:25-66
+		ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:34:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:35:17-77
+ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:35:17-77
 	android:name
-		ADDED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml:35:27-74
+		ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:35:27-74
+activity#com.example.android.common.activities.activity2
+ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:39:9-104
+	android:label
+		ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:39:19-39
+	android:name
+		ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml:39:40-102
 uses-sdk
-INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml
-INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml
+INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml
+INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml
 MERGED from [com.nightonke:boommenu:2.1.1] /home/leo/.gradle/caches/transforms-2/files-2.1/eb07196ce157d418300d8ade5ce48815/boommenu-2.1.1/AndroidManifest.xml:7:5-9:41
 MERGED from [com.nightonke:boommenu:2.1.1] /home/leo/.gradle/caches/transforms-2/files-2.1/eb07196ce157d418300d8ade5ce48815/boommenu-2.1.1/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:support-v13:28.0.0] /home/leo/.gradle/caches/transforms-2/files-2.1/4f4dd0b3e91a7288db2623513415d29d/support-v13-28.0.0/AndroidManifest.xml:20:5-44
@@ -157,13 +163,13 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/leo/.gradle/cache
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/leo/.gradle/caches/transforms-2/files-2.1/85526c118dcfe3eae0cf402e2cecc572/livedata-core-1.1.1/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.1] /home/leo/.gradle/caches/transforms-2/files-2.1/5853616defd81755613306a8befefe63/runtime-1.1.1/AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.1] /home/leo/.gradle/caches/transforms-2/files-2.1/5853616defd81755613306a8befefe63/runtime-1.1.1/AndroidManifest.xml:20:5-44
-INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml
-INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml
+INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml
+INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml
-		ADDED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml
-		INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml
+		INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml
+		ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml
+		INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml
-		ADDED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml
-		INJECTED from /home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/AndroidManifest.xml
+		INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml
+		ADDED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml
+		INJECTED from /home/leo/Documents/android/myapp/RecyclerView/Application/src/main/AndroidManifest.xml

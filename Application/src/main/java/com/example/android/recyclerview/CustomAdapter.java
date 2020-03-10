@@ -16,16 +16,29 @@
 
 package com.example.android.recyclerview;
 
+import com.example.android.common.activities.activity2;
 import com.example.android.common.logger.Log;
 
+import com.nightonke.boommenu.BoomButtons.BoomButton;
+import com.nightonke.boommenu.BoomButtons.ButtonPlaceEnum;
+import com.nightonke.boommenu.BoomButtons.OnBMClickListener;
+import com.nightonke.boommenu.BoomButtons.SimpleCircleButton;
+import com.nightonke.boommenu.BoomMenuButton;
+import com.nightonke.boommenu.ButtonEnum;
+import com.nightonke.boommenu.OnBoomListener;
+import com.nightonke.boommenu.Piece.PiecePlaceEnum;
+
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.media.Image;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Provide views to RecyclerView with data from mDataSet.
@@ -42,7 +55,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView textView;
         private  final ImageView imageView;
-
+        private final BoomMenuButton BmB1;
 
         public ViewHolder(View v) {
             super(v);
@@ -56,12 +69,18 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             textView = (TextView) v.findViewById(R.id.textView);
 
             imageView = (ImageView) v.findViewById(R.id.image_id);
+
+            BmB1 = (BoomMenuButton)v.findViewById(R.id.bmb1);
         }
 
         public TextView getTextView() {
             return textView;
         }
         public ImageView getImageView(){ return imageView;}
+
+        public BoomMenuButton getBmB1() {
+            return BmB1;
+        }
     }
     // END_INCLUDE(recyclerViewSampleViewHolder)
 
@@ -73,6 +92,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     public CustomAdapter(String[] dataSet) {
         mDataSet = dataSet;
     }
+
 
     // BEGIN_INCLUDE(recyclerViewOnCreateViewHolder)
     // Create new views (invoked by the layout manager)
@@ -89,13 +109,47 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     // BEGIN_INCLUDE(recyclerViewOnBindViewHolder)
     // Replace the contents of a view (invoked by the layout manager)
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(final ViewHolder viewHolder, final int position) {
         Log.d(TAG, "Element " + position + " set.");
 
         // Get element from your dataset at this position and replace the contents of the view
         // with that element
-        viewHolder.getTextView().setText(mDataSet[position]);
-        viewHolder.getImageView().setImageResource(R.drawable.ic_launcher);
+        //viewHolder.getTextView().setText(mDataSet[position]);
+       // viewHolder.getImageView().setImageResource(R.drawable.ic_launcher);
+
+        //setup Boom button.
+
+        viewHolder.getBmB1().setButtonEnum(ButtonEnum.SimpleCircle);
+        viewHolder.getBmB1().setPiecePlaceEnum(PiecePlaceEnum.DOT_1);
+        viewHolder.getBmB1().setButtonPlaceEnum(ButtonPlaceEnum.SC_1);
+
+        viewHolder.getBmB1().setInList(true);
+        viewHolder.getBmB1().clearBuilders();
+
+        for(int i=0; i<viewHolder.getBmB1().getButtonPlaceEnum().buttonNumber();i++){
+            SimpleCircleButton.Builder builder =new SimpleCircleButton.Builder().normalImageRes(
+                    R.drawable.shape_oval_normal
+            );
+            builder.listener(new OnBMClickListener() {
+                @Override
+                public void onBoomButtonClick(int index) {
+                   Intent nn = new Intent(viewHolder.getBmB1().getContext(), activity2.class) ;
+                    viewHolder.getBmB1().getContext().startActivity(nn);
+
+                    //Toast.makeText(viewHolder.getBmB1().getContext(), "Clicked " + index, Toast.LENGTH_SHORT).show();
+
+                }
+            });
+            /*
+            viewHolder.getBmB1().addBuilder(new SimpleCircleButton.Builder().normalImageRes(
+                    R.drawable.shape_oval_normal
+            ));;
+             */
+            viewHolder.getBmB1().addBuilder(builder);
+        }
+
+
+
     }
     // END_INCLUDE(recyclerViewOnBindViewHolder)
 
@@ -104,4 +158,5 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     public int getItemCount() {
         return mDataSet.length;
     }
+
 }

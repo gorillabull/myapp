@@ -17,6 +17,8 @@
 
 package com.example.android.recyclerview;
 
+import android.app.ActionBar;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
@@ -24,6 +26,7 @@ import android.view.MenuItem;
 import android.widget.ViewAnimator;
 
 import com.example.android.common.activities.SampleActivityBase;
+import com.example.android.common.activities.activity2;
 import com.example.android.common.logger.Log;
 import com.example.android.common.logger.LogFragment;
 import com.example.android.common.logger.LogWrapper;
@@ -54,7 +57,7 @@ public class MainActivity extends SampleActivityBase {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+ ;
 
         if (savedInstanceState == null) {
 
@@ -95,6 +98,9 @@ public class MainActivity extends SampleActivityBase {
                 supportInvalidateOptionsMenu();
                 return true;
         }
+        //Intent myIntent = new Intent(getApplicationContext(), activity2.class);
+        //startActivityForResult(myIntent, 0);
+
         return super.onOptionsItemSelected(item);
     }
 

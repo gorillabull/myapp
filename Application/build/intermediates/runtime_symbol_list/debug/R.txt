@@ -781,7 +781,7 @@ int id always 0x7f07001d
 int id async 0x7f07001e
 int id beginning 0x7f07001f
 int id blocking 0x7f070020
-int id bmb 0x7f070021
+int id bmb1 0x7f070021
 int id boomHorizontalThrow_1 0x7f070022
 int id boomHorizontalThrow_2 0x7f070023
 int id boomLine 0x7f070024

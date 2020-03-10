@@ -17,9 +17,9 @@
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/list_item_height"
+    android:layout_height="80dp"
     android:layout_marginLeft="1dp"
-    android:layout_marginRight="@dimen/margin_medium"
+    android:layout_marginRight="1dp"
     android:gravity="center">
 
 
@@ -37,5 +37,11 @@
         android:text="@string/element_text"
         android:layout_gravity="center_horizontal"/>
 
+    <com.nightonke.boommenu.BoomMenuButton
+        android:id="@+id/bmb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="clip_horizontal"
+        />
 
 </FrameLayout>

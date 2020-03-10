@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/home/leo/Documents/android/myapp/RecyclerView/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/home/leo/.gradle/caches/transforms-2/files-2.1/4290cbd6710a791e743aff9c26323635/recyclerview-v7-24.0.0/res/values/values.xml",
@@ -40,6 +40,23 @@
                     }
                 },
                 {
+                    "source": "/home/leo/Documents/android/myapp/RecyclerView/Application/src/main/res/values/fragmentview_strings.xml",
+                    "from": {
+                        "startLines": "17,16",
+                        "startColumns": "4,4",
+                        "startOffsets": "670,617",
+                        "endColumns": "52,52",
+                        "endOffsets": "718,665"
+                    },
+                    "to": {
+                        "startLines": "362,363",
+                        "startColumns": "4,4",
+                        "startOffsets": "23106,23159",
+                        "endColumns": "52,52",
+                        "endOffsets": "23154,23207"
+                    }
+                },
+                {
                     "source": "/home/leo/.gradle/caches/transforms-2/files-2.1/27bfd3d5fa1a19402f7d4ba14fb093b2/coordinatorlayout-28.0.0/res/values/values.xml",
                     "from": {
                         "startLines": "2,102,3,13",
@@ -56,23 +73,6 @@
                         "endLines": "3,1865,2909,2998",
                         "endColumns": "60,12,24,24",
                         "endOffsets": "213,124544,183441,188652"
-                    }
-                },
-                {
-                    "source": "/home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/res/values/template-dimens.xml",
-                    "from": {
-                        "startLines": "28,24,23,22,21,20,29",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "959,880,836,791,748,706,1029",
-                        "endColumns": "69,42,43,44,42,41,67",
-                        "endOffsets": "1024,918,875,831,786,743,1092"
-                    },
-                    "to": {
-                        "startLines": "227,232,233,234,235,236,264",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "15092,15433,15476,15520,15565,15608,17293",
-                        "endColumns": "69,42,43,44,42,41,67",
-                        "endOffsets": "15157,15471,15515,15560,15603,15645,17356"
                     }
                 },
                 {
@@ -95,26 +95,7 @@
                     }
                 },
                 {
-                    "source": "/home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/res/values/base-strings.xml",
-                    "from": {
-                        "startLines": "18,19",
-                        "startColumns": "4,4",
-                        "startOffsets": "647,697",
-                        "endLines": "18,29",
-                        "endColumns": "49,13",
-                        "endOffsets": "692,1092"
-                    },
-                    "to": {
-                        "startLines": "347,350",
-                        "startColumns": "4,4",
-                        "startOffsets": "22467,22634",
-                        "endLines": "347,360",
-                        "endColumns": "49,13",
-                        "endOffsets": "22512,23029"
-                    }
-                },
-                {
-                    "source": "/home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/res/values/template-styles.xml",
+                    "source": "/home/leo/Documents/android/myapp/RecyclerView/Application/src/main/res/values/template-styles.xml",
                     "from": {
                         "startLines": "24,20,22,27,29,34",
                         "startColumns": "4,4,4,4,4,4",
@@ -130,6 +111,25 @@
                         "endLines": "371,1747,1748,1756,1856,1862",
                         "endColumns": "50,59,52,26,12,12",
                         "endOffsets": "23824,115464,115517,116216,124121,124399"
+                    }
+                },
+                {
+                    "source": "/home/leo/Documents/android/myapp/RecyclerView/Application/src/main/res/values/base-strings.xml",
+                    "from": {
+                        "startLines": "18,19",
+                        "startColumns": "4,4",
+                        "startOffsets": "647,697",
+                        "endLines": "18,29",
+                        "endColumns": "49,13",
+                        "endOffsets": "692,1092"
+                    },
+                    "to": {
+                        "startLines": "347,350",
+                        "startColumns": "4,4",
+                        "startOffsets": "22467,22634",
+                        "endLines": "347,360",
+                        "endColumns": "49,13",
+                        "endOffsets": "22512,23029"
                     }
                 },
                 {
@@ -149,23 +149,6 @@
                         "endLines": "77,78,178,179,180,181,182,183,184,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,265,266,273,274,278,279,280,281,282,283,307,365,1696,1700,1702,1708,1710,1851,1852,2873,3059,3091,3128,3135",
                         "endColumns": "68,62,69,67,71,69,60,73,72,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,34,34,49,60,56,33,34,34,69,70,116,12,109,12,128,71,66,24,24,24,24,24",
                         "endOffsets": "4934,4997,11849,11917,11989,12059,12120,12194,12267,15706,15767,15829,15893,15955,16016,16084,16184,16244,16310,16383,16452,16509,16561,16623,17428,17504,17844,17879,18071,18132,18189,18223,18258,18293,19704,23331,111797,111998,112174,112558,112753,123858,123925,181441,192591,194656,196416,196793"
-                    }
-                },
-                {
-                    "source": "/home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/res/values/dimens.xml",
-                    "from": {
-                        "startLines": "18",
-                        "startColumns": "4",
-                        "startOffsets": "647",
-                        "endColumns": "47",
-                        "endOffsets": "690"
-                    },
-                    "to": {
-                        "startLines": "231",
-                        "startColumns": "4",
-                        "startOffsets": "15385",
-                        "endColumns": "47",
-                        "endOffsets": "15428"
                     }
                 },
                 {
@@ -205,7 +188,24 @@
                     }
                 },
                 {
-                    "source": "/home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/res/values/strings.xml",
+                    "source": "/home/leo/Documents/android/myapp/RecyclerView/Application/src/main/res/values/dimens.xml",
+                    "from": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "647",
+                        "endColumns": "47",
+                        "endOffsets": "690"
+                    },
+                    "to": {
+                        "startLines": "231",
+                        "startColumns": "4",
+                        "startOffsets": "15385",
+                        "endColumns": "47",
+                        "endOffsets": "15428"
+                    }
+                },
+                {
+                    "source": "/home/leo/Documents/android/myapp/RecyclerView/Application/src/main/res/values/strings.xml",
                     "from": {
                         "startLines": "18,19,20",
                         "startColumns": "4,4,4",
@@ -222,20 +222,20 @@
                     }
                 },
                 {
-                    "source": "/home/leo/Documents/android/views-widgets-samples/RecyclerView/Application/src/main/res/values/fragmentview_strings.xml",
+                    "source": "/home/leo/Documents/android/myapp/RecyclerView/Application/src/main/res/values/template-dimens.xml",
                     "from": {
-                        "startLines": "17,16",
-                        "startColumns": "4,4",
-                        "startOffsets": "670,617",
-                        "endColumns": "52,52",
-                        "endOffsets": "718,665"
+                        "startLines": "28,24,23,22,21,20,29",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "959,880,836,791,748,706,1029",
+                        "endColumns": "69,42,43,44,42,41,67",
+                        "endOffsets": "1024,918,875,831,786,743,1092"
                     },
                     "to": {
-                        "startLines": "362,363",
-                        "startColumns": "4,4",
-                        "startOffsets": "23106,23159",
-                        "endColumns": "52,52",
-                        "endOffsets": "23154,23207"
+                        "startLines": "227,232,233,234,235,236,264",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "15092,15433,15476,15520,15565,15608,17293",
+                        "endColumns": "69,42,43,44,42,41,67",
+                        "endOffsets": "15157,15471,15515,15560,15603,15645,17356"
                     }
                 }
             ]
