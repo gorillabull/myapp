@@ -9,7 +9,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d58640bd-f827-4805-ae15-3a09b4865005" name="Default Changelist" comment="" />
+    <list default="true" id="d58640bd-f827-4805-ae15-3a09b4865005" name="Default Changelist" comment="ADDED CONTEXT CLASS TO NEW ACTIVITY CREATED BY CLICKING BUTTON112">
+      <change beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/recyclerview/CustomAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/recyclerview/CustomAdapter.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584068598759</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ADDED CONTEXT CLASS TO NEW ACTIVITY CREATED BY CLICKING BUTTON1">
+      <created>1584077443159</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584077443159</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,6 +165,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ADDED CONTEXT CLASS TO NEW ACTIVITY CREATED BY CLICKING BUTTON" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADDED CONTEXT CLASS TO NEW ACTIVITY CREATED BY CLICKING BUTTON" />
+    <MESSAGE value="ADDED CONTEXT CLASS TO NEW ACTIVITY CREATED BY CLICKING BUTTON1" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADDED CONTEXT CLASS TO NEW ACTIVITY CREATED BY CLICKING BUTTON1" />
   </component>
 </project>

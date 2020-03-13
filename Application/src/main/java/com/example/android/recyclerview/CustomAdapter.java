@@ -135,7 +135,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             builder.listener(new OnBMClickListener() {
                 @Override
                 public void onBoomButtonClick(int index) {
-                   Intent nn = new Intent(baseCont , activity2.class) ; //viewHolder.getBmB1().getContext()
+                   Intent nn = new Intent(baseCont , activity2.class) ; //viewHolder.getBmB1().getContext() 11
                     viewHolder.getBmB1().getContext().startActivity(nn);
 
                     //Toast.makeText(viewHolder.getBmB1().getContext(), "Clicked " + index, Toast.LENGTH_SHORT).show();
