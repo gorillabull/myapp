@@ -19,27 +19,26 @@ package com.example.android.recyclerview;
 import com.example.android.common.activities.activity2;
 import com.example.android.common.logger.Log;
 
-import com.nightonke.boommenu.BoomButtons.BoomButton;
 import com.nightonke.boommenu.BoomButtons.ButtonPlaceEnum;
 import com.nightonke.boommenu.BoomButtons.OnBMClickListener;
 import com.nightonke.boommenu.BoomButtons.SimpleCircleButton;
 import com.nightonke.boommenu.BoomMenuButton;
 import com.nightonke.boommenu.ButtonEnum;
-import com.nightonke.boommenu.OnBoomListener;
 import com.nightonke.boommenu.Piece.PiecePlaceEnum;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.media.Image;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import org.w3c.dom.Text;
+
+import java.util.List;
 
 /**
  * Provide views to RecyclerView with data from mDataSet.
@@ -48,6 +47,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     private static final String TAG = "CustomAdapter";
 
     private String[] mDataSet;
+    private List<Object> items;
+
     private final Context baseCont;
     // BEGIN_INCLUDE(recyclerViewSampleViewHolder)
     /**
@@ -84,15 +85,48 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         }
     }
     // END_INCLUDE(recyclerViewSampleViewHolder)
+    public static class ViewHolder1 extends  RecyclerView.ViewHolder{
+        /*
+        public final replaceme
+        public final replaec
+        public final replacee
+         */
+        private TextView textView;
 
+        public ViewHolder1(View v ){
+            super(v);
+            textView = (TextView) v.findViewById(R.id.textViewTitle);
+            /*Define some event
+              v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.d(TAG, "Element " + getAdapterPosition() + " clicked.");
+                }
+            });
+             */
+
+            /*Set the public final vars to something
+
+                        textView = (TextView) v.findViewById(R.id.textView);
+
+            imageView = (ImageView) v.findViewById(R.id.image_id);
+
+            BmB1 = (BoomMenuButton)v.findViewById(R.id.bmb1);
+             */
+        }
+
+        //optional have some public acess functions nah.
+
+    }
     /**
      * Initialize the dataset of the Adapter.
      *
      * @param dataSet String[] containing the data to populate views to be used by RecyclerView.
      */
-    public CustomAdapter(Context baseContext , String[] dataSet) {
+    public CustomAdapter(Context baseContext , String[] dataSet, List<Object> items) {
         baseCont= baseContext;
         mDataSet = dataSet;
+        this.items  =  items;
     }
 
 
@@ -103,6 +137,22 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         // Create a new view.
         View v = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.text_row_item, viewGroup, false);
+        switch (viewType){
+            case 1:
+                /*
+                View v1 = inflater.inflate(R.layout.layout_viewholder1, viewGroup, false);
+              viewHolder = new ViewHolder1(v1);
+              break;
+                 */
+            case 2:
+                /*
+              View v2 = inflater.inflate(R.layout.layout_viewholder2, viewGroup, false);
+              viewHolder = new ViewHolder2(v2);
+              break;
+                 */
+                default:
+
+        }
 
         return new ViewHolder(v);
     }
@@ -120,7 +170,18 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
        // viewHolder.getImageView().setImageResource(R.drawable.ic_launcher);
 
         //setup Boom button.
-
+        switch (viewHolder.getItemViewType()){
+            case 1:
+                /*
+              ViewHolder1 vh1 = (ViewHolder1) viewHolder;
+              configureViewHolder1(vh1, position);
+              break;
+                 */
+            case 2:
+                break;
+            default:
+                break;
+        }
         viewHolder.getBmB1().setButtonEnum(ButtonEnum.SimpleCircle);
         viewHolder.getBmB1().setPiecePlaceEnum(PiecePlaceEnum.DOT_1);
         viewHolder.getBmB1().setButtonPlaceEnum(ButtonPlaceEnum.SC_1);
@@ -153,12 +214,24 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
 
     }
+    private void configureDefaultViewHolder(ViewHolder1 vh, int pos){
+
+    }
     // END_INCLUDE(recyclerViewOnBindViewHolder)
 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
         return mDataSet.length;
+    }
+    @Override
+    public int getItemViewType(int pos){
+        if(items.get(pos) instanceof ViewHolder){
+            return 1;
+        }else if (items.get(pos) instanceof ViewHolder1){
+            return 2;
+        }
+        return -1;
     }
 
 }

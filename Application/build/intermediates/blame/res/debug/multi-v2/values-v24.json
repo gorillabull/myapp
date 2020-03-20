@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/leo/StudioProjects/myapp/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "C:\\Users\\longe\\Documents\\android\\myapp\\RecyclerView\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "/home/leo/.gradle/caches/transforms-2/files-2.1/aaffe2c7f23d715ca045db9d0a51d031/appcompat-v7-28.0.0/res/values-v24/values-v24.xml",
+                    "source": "C:\\Users\\longe\\.gradle\\caches\\transforms-2\\files-2.1\\24c8333af3f2d43ff2b1c71d3d52d739\\appcompat-1.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/leo/.gradle/caches/transforms-2/files-2.1/95c31ded494307afe99fdddbe88a703e/support-media-compat-28.0.0/res/values-v24/values-v24.xml",
+                    "source": "C:\\Users\\longe\\.gradle\\caches\\transforms-2\\files-2.1\\e6db2a8ebafb4101960628e4b20a9462\\media-1.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
