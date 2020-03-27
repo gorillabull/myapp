@@ -817,7 +817,6 @@ drawable tooltip_frame_light
 id ALT
 id CTRL
 id FUNCTION
-id ImageView2
 id META
 id SHIFT
 id SYM
@@ -860,8 +859,6 @@ id boomParabola_4
 id boomRandom
 id bottom
 id button
-id button3
-id button7
 id buttonPanel
 id buttonPlaceAlignment_bl
 id buttonPlaceAlignment_bottom
@@ -955,7 +952,6 @@ id icon
 id icon_group
 id ifRoom
 id image
-id imageView
 id image_id
 id inBack
 id inBounce
@@ -978,6 +974,7 @@ id inQuart
 id inQuint
 id inSine
 id info
+id info_fragment
 id invisible
 id italic
 id item_touch_helper_previous_elevation
@@ -990,6 +987,9 @@ id linear_layout_rb
 id listMode
 id list_item
 id log_fragment
+id main_trait_description
+id main_trait_image
+id main_trait_title
 id media_actions
 id menu_toggle_log
 id message
@@ -1065,6 +1065,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id recyclerView
+id recyclerView2
 id right
 id right_icon
 id right_side
@@ -1115,7 +1116,7 @@ id textOutsideCircle
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textView
-id textView2
+id textViewTitle
 id time
 id title
 id titleDividerNoCustom
@@ -1186,6 +1187,7 @@ layout bmb_simple_circle_button
 layout bmb_text_inside_circle_button
 layout bmb_text_outside_circle_button
 layout info_activity
+layout info_recyler_frag
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -1206,7 +1208,10 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout testone
 layout text_row_item
+layout titled_spacer
+layout trait_box_one
 menu main
 string abc_action_bar_home_description
 string abc_action_bar_up_description

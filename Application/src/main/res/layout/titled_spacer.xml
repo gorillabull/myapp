@@ -4,7 +4,9 @@
     android:layout_height="35dp"
     android:layout_marginLeft="1dp"
     android:layout_marginRight="1dp"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@color/cardview_dark_background"
+    >
 
     <TextView
         android:id="@+id/textViewTitle"
