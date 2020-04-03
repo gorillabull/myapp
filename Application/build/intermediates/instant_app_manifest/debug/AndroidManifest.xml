@@ -21,7 +21,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="18"
         android:targetSdkVersion="28" />
 
     <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
@@ -46,6 +46,9 @@
         <activity
             android:name="com.example.android.common.activities.activity2"
             android:label="act2" />
+        <activity
+            android:name="com.example.android.common.activities.MainActTwo"
+            android:label="act3" />
     </application>
 
 </manifest>

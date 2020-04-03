@@ -19,14 +19,11 @@ package com.example.android.recyclerview;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Debug;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -35,15 +32,11 @@ import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.example.android.common.activities.MainActTwo;
 import com.nightonke.boommenu.BoomMenuButton;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
 
 /**
  * Demonstrates the use of {@link RecyclerView} with a {@link LinearLayoutManager} and a
@@ -178,6 +171,58 @@ public class RecyclerViewFragment extends Fragment {
                 mRecyclerView.setAdapter(mAdapter);
 
         break;
+            case 3:
+                rootView = inflater.inflate(R.layout.info_recyler_frag,container,false);
+                rootView.setTag(TAG);
+                //init recycler view
+                mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView2);
+                // LinearLayoutManager is used here, this will layout the elements in a similar fashion
+                // to the way ListView would layout elements. The RecyclerView.LayoutManager defines how
+                // elements are laid out.
+                mLayoutManager = new LinearLayoutManager(getActivity());
+                mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
+
+                if (savedInstanceState != null) {
+                    // Restore saved layout manager type.
+                    mCurrentLayoutManagerType = (LayoutManagerType) savedInstanceState
+                            .getSerializable(KEY_LAYOUT_MANAGER);
+                }
+                setRecyclerViewLayoutManager(mCurrentLayoutManagerType);
+
+                ArrayList<Object> items3 = new ArrayList<>();
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+                items3.add(new TeamBuilderSet());
+
+
+                Object main = getActivity();
+                main = (MainActTwo)main;
+
+               // ((MainActTwo) main).RecyclerViewChampions_OnClick(31);
+
+                mAdapter = new CustomAdapter(getContext(), mDataset, items3, main);
+                //set custom adapter
+                mRecyclerView.setAdapter(mAdapter);
+                break;
             default:
              rootView = inflater.inflate(R.layout.recycler_view_frag, container, false);
         }

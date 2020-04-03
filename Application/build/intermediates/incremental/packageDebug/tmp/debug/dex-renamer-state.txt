@@ -1,4 +1,4 @@
-#Thu Mar 26 15:27:35 CDT 2020
-base.0=C\:\\Users\\longe\\Documents\\android\\myapp\\RecyclerView\\Application\\build\\intermediates\\dex\\debug\\out\\classes.dex
+#Fri Apr 03 15:43:38 PDT 2020
+base.0=/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/dex/debug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

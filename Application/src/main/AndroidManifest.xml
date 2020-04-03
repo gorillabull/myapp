@@ -38,6 +38,7 @@
         </activity>
 
         <activity android:label="act2" android:name="com.example.android.common.activities.activity2"/>
+        <activity android:label="act3" android:name="com.example.android.common.activities.MainActTwo"/>
     </application>
 
 
