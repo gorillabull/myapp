@@ -48,6 +48,10 @@
         "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable/tft3_jinx_mobile_.png"
     },
     {
+        "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_splash_screen_background.xml.flat",
+        "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable/splash_screen_background.xml"
+    },
+    {
         "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable-xxhdpi_star.png.flat",
         "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable-xxhdpi/star.png"
     },
@@ -170,6 +174,10 @@
     {
         "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_tft3_shaco_mobile_.png.flat",
         "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable/tft3_shaco_mobile_.png"
+    },
+    {
+        "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_black_background.xml.flat",
+        "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable/black_background.xml"
     },
     {
         "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_tft3_wukong_mobile_.png.flat",

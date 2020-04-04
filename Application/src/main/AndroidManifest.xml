@@ -31,14 +31,21 @@
 
         <activity android:name=".MainActivity"
                   android:label="@string/app_name">
+
+        </activity>
+
+        <activity android:label="act2" android:name="com.example.android.common.activities.activity2">
+
+
+        </activity>
+
+
+        <activity android:label="act3" android:name="com.example.android.common.activities.MainActTwo"  android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:label="act2" android:name="com.example.android.common.activities.activity2"/>
-        <activity android:label="act3" android:name="com.example.android.common.activities.MainActTwo"/>
     </application>
 
 

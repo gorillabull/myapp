@@ -794,6 +794,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable black_background
 drawable border_pink
 drawable fade_red
 drawable ic_launcher
@@ -815,6 +816,7 @@ drawable piece_dot
 drawable radar_marker
 drawable shape_oval_normal
 drawable shape_rectangle_normal
+drawable splash_screen_background
 drawable star
 drawable tft3_ahri_mobile_
 drawable tft3_annie_mobile_
@@ -1023,14 +1025,14 @@ id imageView6
 id imageView7
 id imageView8
 id image_id
-id image_id10
-id image_id11
+id image_id1
+id image_id2
+id image_id3
 id image_id4
 id image_id5
 id image_id6
 id image_id7
 id image_id8
-id image_id9
 id inBack
 id inBounce
 id inCirc
@@ -1537,6 +1539,7 @@ style RtlOverlay_Widget_AppCompat_Search_DropDown_Text
 style RtlOverlay_Widget_AppCompat_SearchView_MagIcon
 style RtlUnderlay_Widget_AppCompat_ActionButton
 style RtlUnderlay_Widget_AppCompat_ActionButton_Overflow
+style SplashScreenTheme
 style TextAppearance_AppCompat
 style TextAppearance_AppCompat_Body1
 style TextAppearance_AppCompat_Body2

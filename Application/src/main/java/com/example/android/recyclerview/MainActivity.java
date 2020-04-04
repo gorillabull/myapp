@@ -56,6 +56,7 @@ public class MainActivity extends SampleActivityBase {
         if (savedInstanceState == null) {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             Bundle args = new Bundle();
+
             args.putInt("key1",1);
             RecyclerViewFragment fragment = new RecyclerViewFragment();
             fragment.setArguments(args);

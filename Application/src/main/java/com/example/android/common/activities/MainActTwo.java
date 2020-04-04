@@ -12,6 +12,8 @@ import androidx.fragment.app.FragmentTransaction;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import com.example.android.recyclerview.ChampBase;
@@ -95,6 +97,10 @@ public class MainActTwo extends SampleActivityBase implements
     private final int VALKYRIA = 19;
     private final int VANGUARD = 20;
     private final int VOID =    21;
+
+    private PopupWindow popupWindow;
+    LinearLayout popupLayout;
+    LinearLayout.LayoutParams popupParams;
 
 
     private class SearchableList{
@@ -184,9 +190,20 @@ public class MainActTwo extends SampleActivityBase implements
             subFamilySets[i] = 0;
         }
 
-        ActionBar actionBar = getActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(false   );
-        actionBar.hide();
+        /*
+        TEST
+         */
+        popupWindow = new PopupWindow(this);
+        popupLayout = new LinearLayout(this);
+        popupParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
+        popupLayout.setOrientation(LinearLayout.VERTICAL);
+        popupLayout.addView(champ_slots[0],popupParams);
+        popupWindow.setContentView(popupLayout);
+
+       // ActionBar actionBar = getActionBar();
+       // actionBar.setDisplayHomeAsUpEnabled(false   );
+       // actionBar.hide();
 
         if (savedInstanceState == null){
             FragmentTransaction transaction =getSupportFragmentManager().beginTransaction();
@@ -198,6 +215,7 @@ public class MainActTwo extends SampleActivityBase implements
             transaction.replace(R.id.sample_content_fragment3,fragment);
             transaction.commit();
         }
+
 
         setTitle("Team Power Calculator");
         champ_slots[0] = (ImageView)findViewById(R.id.imageView3_1);
@@ -213,7 +231,7 @@ public class MainActTwo extends SampleActivityBase implements
 
 
         for(int i=0 ; i < champ_slots.length; i++){
-            champ_slots[i].setImageResource(R.drawable.fade_red);
+            champ_slots[i].setImageResource(R.drawable.black_background);
             champ_slots[i].setTag(i);
             //mark it so we can index it;
             emptySlots.push(i);
@@ -228,10 +246,11 @@ public class MainActTwo extends SampleActivityBase implements
                      v = (ImageView)v;
                      int tag = (Integer)v.getTag();                                               //get the tag of the display box image
                      if (!emptySlots.contains(tag)){
-                         ((ImageView) v).setImageResource(R.drawable.fade_red);
+                         ((ImageView) v).setImageResource(R.drawable.black_background);
                          emptySlots.push((Integer)v.getTag());//recycle the empty slot
                          //clear the icon from storage so it can appear again
                          champsClicked.removeByDisplayId(tag);
+
                      }
 
                 }

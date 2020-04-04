@@ -39,4 +39,11 @@
         <item name="android:shadowRadius">2</item>
     </style>
 
+    <!--Style for Splash Screen-->
+    <style name="SplashScreenTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name ="android:windowBackground"> @drawable/splash_screen_background</item>
+    </style>
+
+
+
 </resources>

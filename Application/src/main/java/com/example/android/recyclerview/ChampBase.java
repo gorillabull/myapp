@@ -30,6 +30,7 @@ public  class ChampBase {
     public int family; //cybernetic, space pirate star guardian etc
     public int subFamily; //mana reaver, infiltrator, brawler
 
+
     /**
      * Unique id of the champion inside the app.
      */
@@ -123,6 +124,26 @@ static{
             return icons.get(index);
         }
         return icons.get(0);
+    }
+
+    /**
+     * Returns the champion's rarity: white green blue purple or orange on a scale of 0-4
+     * @return
+     */
+    public int getRarity(){
+        if (this.hp == 123){
+            return 0;
+        }
+        if (this.hp==234){
+            return 1;
+        }
+        if (this.hp==456){
+            return 2;
+        }
+        if (this.hp==678){
+            return 3;
+        }
+        return 4;
     }
 }
 

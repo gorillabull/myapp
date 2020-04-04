@@ -33,6 +33,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AlertDialogLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,6 +61,7 @@ public class CustomAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     private static int iter =0; //iterate over icons
 
+    private Integer [] champBorderColors;
 
     private static ArrayList<ChampBase> All;
     // BEGIN_INCLUDE(recyclerViewSampleViewHolder)
@@ -154,21 +156,23 @@ public class CustomAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         }
     }
     public static class ViewHolder3 extends  RecyclerView.ViewHolder{
-        private ImageView [] items = new ImageView[10];
+        private ImageView [] items = new ImageView[8];
         private TextView textView ;
 
         public ViewHolder3(View v){
             super(v);
-            items[7] = (ImageView)v.findViewById(R.id.image_id4);
-            items[6] = (ImageView)v.findViewById(R.id.image_id5);
+            items[7] = (ImageView)v.findViewById(R.id.image_id8);
+            items[6] = (ImageView)v.findViewById(R.id.image_id7);
+
             items[5] = (ImageView)v.findViewById(R.id.image_id6);
-            items[4] = (ImageView)v.findViewById(R.id.image_id7);
-            items[3] = (ImageView)v.findViewById(R.id.image_id8);
-            items[2] = (ImageView)v.findViewById(R.id.image_id9);
-            items[1] = (ImageView)v.findViewById(R.id.image_id10);
-            items[0] = (ImageView)v.findViewById(R.id.image_id11);
+            items[4] = (ImageView)v.findViewById(R.id.image_id5);
+            items[3] = (ImageView)v.findViewById(R.id.image_id4);
+            items[2] = (ImageView)v.findViewById(R.id.image_id3);
+            items[1] = (ImageView)v.findViewById(R.id.image_id2);
+            items[0] = (ImageView)v.findViewById(R.id.image_id1);
 
             textView = (TextView)v.findViewById(R.id.IconSetTitleText);
+
        }
 
         public ImageView[] getItems() {
@@ -199,10 +203,17 @@ public class CustomAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         this.items  =  items;
         this.mainAct=main;
 
-All = new ArrayList<>();
+            All = new ArrayList<>();
 
         Iconsets = new ArrayList<>();
         StripTitles = new ArrayList<>();
+
+        champBorderColors = new Integer[5];
+        champBorderColors[0]= Color.GRAY;
+        champBorderColors[1] = Color.GREEN;
+        champBorderColors[2] = Color.BLUE;
+        champBorderColors[3]= Color.MAGENTA;
+        champBorderColors[4]=Color.YELLOW;
 
         //create some champions;
         /*0 */		ChampBase Ahri = new ChampBase(R.drawable.tft3_ahri_mobile_, 234,234,0);
@@ -685,9 +696,10 @@ Chrono.add(Thresh);
         }
 
         //clear previous icons
-        for (int i=0; i < 8 ;i ++){
+        for (int i=0; i < vh3.items.length ;i ++){
             vh3.items[i].setImageBitmap(null);
             vh3.items[i].destroyDrawingCache();
+            vh3.items[i].setBackgroundColor(Color.BLACK);
 
         }
         if (position < Iconsets.size()) { //dont go past the list
@@ -699,6 +711,11 @@ Chrono.add(Thresh);
                 vh3.items[i].setImageResource(Id);
                 //tag it
                 vh3.items[i].setTag(tag); //position * 10 + i
+
+                vh3.items[i].setBackgroundColor(
+                        champBorderColors[Iconsets.get(position).get(i).getRarity()]
+                );
+
 
                 vh3.items[i].setClickable(true);
                 vh3.items[i].setOnClickListener(new View.OnClickListener() {
