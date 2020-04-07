@@ -12,6 +12,8 @@
     android:background="#E89E1E">
 
 
+
+
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/chart1"
         android:layout_width="411dp"
@@ -243,24 +245,40 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/dataViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="367dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-5dp"
+        android:layout_marginTop="350dp">
+
+
+    </androidx.viewpager2.widget.ViewPager2>
+
     <FrameLayout
         android:id="@+id/sample_content_fragment3"
         android:layout_width="match_parent"
         android:layout_height="367dp"
         android:layout_below="@+id/chart1"
-        android:background="#E89E1E"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="93dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginBottom="1dp"
-        android:layout_weight="2" />
+        android:layout_marginStart="179dp"
+        android:layout_marginLeft="179dp"
+        android:layout_marginTop="271dp"
+        android:layout_marginEnd="-179dp"
+        android:layout_marginRight="-179dp"
+        android:layout_marginBottom="-177dp"
+        android:layout_weight="2"
+        android:background="#E89E1E">
+
+
+    </FrameLayout>
 
     <View
         android:layout_width="match_parent"
@@ -268,6 +286,13 @@
         android:background="@android:color/darker_gray"
 
         />
-
+    <com.nightonke.boommenu.BoomMenuButton
+        android:id="@+id/bmb123"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:bmb_buttonEnum="ham"
+        app:bmb_buttonPlaceEnum="buttonPlace_ham_4"
+        app:bmb_piecePlaceEnum="piecePlace_ham_4" />lll
 
 </RelativeLayout>

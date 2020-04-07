@@ -1,15 +1,15 @@
 [
     {
-        "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_tft3_vi_mobile_.png.flat",
-        "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable/tft3_vi_mobile_.png"
+        "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable-xxhdpi/ic_launcher.png"
     },
     {
         "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_tft3_mordekaiser_mobile_.png.flat",
         "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable/tft3_mordekaiser_mobile_.png"
     },
     {
-        "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_launcher.png.flat",
-        "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable-xxhdpi/ic_launcher.png"
+        "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_tft3_vi_mobile_.png.flat",
+        "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable/tft3_vi_mobile_.png"
     },
     {
         "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_tft3_ashe_mobile_.png.flat",
@@ -32,16 +32,16 @@
         "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable/tft3_graves_mobile_.png"
     },
     {
-        "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_tft3_rakan_mobile_.png.flat",
-        "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable/tft3_rakan_mobile_.png"
+        "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/layout_testone.xml.flat",
+        "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/layout/testone.xml"
     },
     {
         "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_tft3_xinzhao_mobile_.png.flat",
         "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable/tft3_xinzhao_mobile_.png"
     },
     {
-        "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/layout_testone.xml.flat",
-        "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/layout/testone.xml"
+        "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_tft3_rakan_mobile_.png.flat",
+        "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable/tft3_rakan_mobile_.png"
     },
     {
         "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_tft3_jinx_mobile_.png.flat",
@@ -208,6 +208,10 @@
         "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable/tft3_rumble_mobile_.png"
     },
     {
+        "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/layout_radar_graph_activity.xml.flat",
+        "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/layout/radar_graph_activity.xml"
+    },
+    {
         "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/layout_recycler_view_frag.xml.flat",
         "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/layout/recycler_view_frag.xml"
     },
@@ -230,6 +234,10 @@
     {
         "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable-mdpi_ic_launcher.png.flat",
         "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/layout_activity_screen_slide.xml.flat",
+        "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/layout/activity_screen_slide.xml"
     },
     {
         "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_tft3_khazix_mobile_.png.flat",

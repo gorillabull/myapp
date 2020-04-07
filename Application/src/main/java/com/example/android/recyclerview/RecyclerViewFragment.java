@@ -65,6 +65,8 @@ public class RecyclerViewFragment extends Fragment {
     protected String[] mDataset;
     protected BoomMenuButton boomMenuButton ;
     private int hello ;
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

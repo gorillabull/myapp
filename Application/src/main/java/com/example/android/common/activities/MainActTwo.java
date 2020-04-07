@@ -1,25 +1,38 @@
 package com.example.android.common.activities;
 
+import android.annotation.SuppressLint;
 import android.app.ActionBar;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.example.android.recyclerview.ChampBase;
 import com.example.android.recyclerview.ChampStatsAxisFormatter;
+import com.example.android.recyclerview.CustomAdapter;
 import com.example.android.recyclerview.R;
+import com.example.android.recyclerview.RadarGraphActivity;
 import com.example.android.recyclerview.RecyclerViewFragment;
+import com.example.android.recyclerview.TeamBuilderSet;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.LimitLine;
@@ -49,10 +62,22 @@ import com.github.mikephil.charting.utils.MPPointF;
 
 import com.example.android.recyclerview.Fill;
 
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.ViewPager2;
+import androidx.viewpager2.widget.ViewPager2.Orientation;
+
+
+
 
 import com.github.mikephil.charting.utils.Utils;
+import com.nightonke.boommenu.BoomButtons.HamButton;
+import com.nightonke.boommenu.BoomButtons.OnBMClickListener;
+import com.nightonke.boommenu.BoomMenuButton;
 
-public class MainActTwo extends SampleActivityBase implements
+public class MainActTwo extends FragmentActivity implements
         OnChartValueSelectedListener {
     private BarChart chart;
     private ImageView imageView1;
@@ -74,6 +99,9 @@ public class MainActTwo extends SampleActivityBase implements
     private Integer []  familySets;
     private Integer []  subFamilySets;
     private Integer []  familySetBonusCount;
+
+
+
 
     private final  int BLADEMASTER =1;
     private final int BLASTER = 2;
@@ -102,69 +130,24 @@ public class MainActTwo extends SampleActivityBase implements
     LinearLayout popupLayout;
     LinearLayout.LayoutParams popupParams;
 
-
-    private class SearchableList{
-        private ArrayList<ChampDisplayTuple> arrayList;
-
-        public SearchableList(){
-            arrayList = new ArrayList<>();
-        }
-
-        public void push(ChampDisplayTuple tuple){
-            arrayList.add(tuple);
-
-        }
-        public boolean containsChampionId(int id){
-            for (int i =0; i <arrayList.size(); i++){
-                if (arrayList.get(i).champId == id){
-                    return true;
-                }
-            }
-            return false;
-        }
-        public void removeByDisplayId(int id){
-            for (int i =0; i<arrayList.size();i++){
-                if (arrayList.get(i).dispId==id){
-                    arrayList.remove(i);
-                    break;
-                }
-            }
-        }
+    /**Viewpager stuff
+     *
+     */
+    private ViewPager2 viewPager2;
+    private static final int NUM_PAGES = 2;
+    private FragmentStateAdapter pagerAdapter;
 
 
-     /*
-        public ArrayList<Entry> getChartData(){
-            ArrayList<Entry> ret = new ArrayList<>();
-            for (int i=0; i<arrayList.size();i++){
-                Entry entry = new Entry(arrayList.get(i).);
-            }
-      */
 
-    }
-    private class ChampDisplayTuple{
-        public int champId, //global id of the champion
-                dispId;     //id in the display when selected.
-        public int hp, dps;
+    private BoomMenuButton boomMenuButtonNav;
 
 
-        public ChampDisplayTuple(int chId, int displayId){
-        champId=chId;
-        dispId=displayId;
-        }
 
-       /*
-        public ChampDisplayTuple(int chId, int displayId){
-            champId=chId;
-            dispId=displayId;
-        }
-        */
-
-
-    }
     @Override
     protected  void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.am_two  );
+
         champ_slots = new ImageView[10];
         emptySlots = new Stack<>()  ;
 
@@ -190,31 +173,12 @@ public class MainActTwo extends SampleActivityBase implements
             subFamilySets[i] = 0;
         }
 
-        /*
-        TEST
-         */
-        popupWindow = new PopupWindow(this);
-        popupLayout = new LinearLayout(this);
-        popupParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT);
-        popupLayout.setOrientation(LinearLayout.VERTICAL);
-        popupLayout.addView(champ_slots[0],popupParams);
-        popupWindow.setContentView(popupLayout);
 
        // ActionBar actionBar = getActionBar();
        // actionBar.setDisplayHomeAsUpEnabled(false   );
        // actionBar.hide();
 
-        if (savedInstanceState == null){
-            FragmentTransaction transaction =getSupportFragmentManager().beginTransaction();
-            Bundle args = new Bundle();
-            args.putInt("key1",3);
-            RecyclerViewFragment fragment = new RecyclerViewFragment();
-            fragment.setArguments(args);
 
-            transaction.replace(R.id.sample_content_fragment3,fragment);
-            transaction.commit();
-        }
 
 
         setTitle("Team Power Calculator");
@@ -335,6 +299,63 @@ public class MainActTwo extends SampleActivityBase implements
 
         setData(5,100);
         chart.invalidate();
+
+
+        viewPager2 = (ViewPager2)findViewById(R.id.dataViewPager);
+        viewPager2.setPageTransformer(new ZoomOutPageTransformer());
+        pagerAdapter= new ScreenSlidePagerAdapter(this);
+        viewPager2.setAdapter(pagerAdapter);
+
+
+
+        if (savedInstanceState == null){
+     /*
+            FragmentTransaction transaction =getSupportFragmentManager().beginTransaction();
+            Bundle args = new Bundle();
+
+            args.putInt("key1",3);
+            RecyclerViewFragment fragment = new RecyclerViewFragment();
+            fragment.setArguments(args);
+
+            transaction.replace(R.id.sample_content_fragment3,fragment);
+            transaction.commit();
+      */
+        }
+
+
+        boomMenuButtonNav  = (BoomMenuButton)findViewById(R.id.bmb123);
+
+        for (int i =0; i< boomMenuButtonNav.getPiecePlaceEnum().pieceNumber(); i++){
+            HamButton.Builder builder = new HamButton.Builder()
+                    .normalImageRes(R.drawable.tft3_ahri_mobile_)
+                    .normalText("title").subNormalText("subtitle");
+            builder.listener(new OnBMClickListener() {
+                @Override
+                public void onBoomButtonClick(int index) {
+                    //
+                    if (index ==1   ){
+                        //the radar graph activity
+                        Intent startRadarGraphActivity = new Intent(getBaseContext(), RadarGraphActivity.class)  ;
+                        startRadarGraphActivity.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+
+
+                        startRadarGraphActivity.putExtra("Hp",123f);
+                        startRadarGraphActivity.putExtra("Armor",123f);
+                        startRadarGraphActivity.putExtra("Stat3",123f);
+                        startRadarGraphActivity.putExtra("Stat4",123f);
+                        startRadarGraphActivity.putExtra("Stat5",123f);
+
+                        startActivity(startRadarGraphActivity);
+                        //boomMenuButtonNav.getContext().startActivity(startRadarGraphActivity);
+
+                    }
+
+                }
+            });
+            boomMenuButtonNav.addBuilder(builder);
+        }
+
+
     }
     /**
      * Method in the main activity which is called inside a fragment containing a recyclerview
@@ -748,5 +769,335 @@ public class MainActTwo extends SampleActivityBase implements
 
     @Override
     public void onNothingSelected() { }
+
+    @Override
+    public void onBackPressed(){
+
+    }
+
+    /**
+     * A simple pager adapter that represents 5 ScreenSlidePageFragment objects, in
+     * sequence.
+     */
+    private class ScreenSlidePagerAdapter extends FragmentStateAdapter { //FOR LARGE NUMBERS OF PAGES
+        public ScreenSlidePagerAdapter(FragmentActivity fa) {
+            super(fa);
+        }
+
+        @Override
+        public Fragment createFragment(int position) {
+            switch (position) {
+                case 0:
+                    return SecondFragment.newInstance("sldf");
+                case 1:
+                    return  FirstFragment.newInstance("bla");
+                case 3:
+                    return new Fragment();
+                default:
+                    return new Fragment();
+            }
+
+        }
+
+        @Override
+        public int getItemCount() {
+            return NUM_PAGES;
+        }
+
+
+    }
+
+    public  static class FirstFragment extends Fragment {
+
+
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+            View v = inflater.inflate(R.layout.radar_markerview, container, false);
+
+
+            return v;
+        }
+
+        public void onViewCreated(@NonNull View view, Bundle savedInstanceState){
+            super.onViewCreated(view, savedInstanceState);
+
+        }
+        public static FirstFragment newInstance(String text) {
+
+            FirstFragment f = new FirstFragment();
+            Bundle b = new Bundle();
+            b.putString("msg", text);
+
+            f.setArguments(b);
+
+            return f;
+        }
+
+    }
+
+
+    //----------------------------------------------------------------------------------------------------
+    public static class SecondFragment extends Fragment implements OnChartValueSelectedListener {
+        private static final String TAG = "RecyclerViewFragment";
+        private static final String KEY_LAYOUT_MANAGER = "layoutManager";
+        private static final int SPAN_COUNT = 4;
+        private static final int DATASET_COUNT = 60;
+
+        private enum LayoutManagerType {
+            GRID_LAYOUT_MANAGER,
+            LINEAR_LAYOUT_MANAGER
+        }
+
+        protected LayoutManagerType mCurrentLayoutManagerType;
+
+        protected RadioButton mLinearLayoutRadioButton;
+        protected RadioButton mGridLayoutRadioButton;
+
+        protected RecyclerView mRecyclerView;
+        protected CustomAdapter mAdapter;
+        protected RecyclerView.LayoutManager mLayoutManager;
+        protected String[] mDataset;
+        protected BoomMenuButton boomMenuButton ;
+        private int hello ;
+
+
+
+        public static SecondFragment newInstance(String text) {
+
+            SecondFragment f = new SecondFragment();
+            Bundle b = new Bundle();
+            b.putString("msg", text);
+
+            f.setArguments(b);
+
+            return f;
+        }
+
+        @Override
+        public void onCreate(Bundle sis) {
+            super.onCreate(sis);
+
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle
+                savedInstanceState){
+            View rootView = inflater.inflate(R.layout.info_recyler_frag,container,false);
+            rootView.setTag(TAG);
+
+            mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView2);
+
+            mLayoutManager= new LinearLayoutManager(getActivity());
+            mCurrentLayoutManagerType =LayoutManagerType.LINEAR_LAYOUT_MANAGER;
+
+            if (savedInstanceState != null){
+                mCurrentLayoutManagerType = (LayoutManagerType)savedInstanceState
+                        .getSerializable(KEY_LAYOUT_MANAGER);
+
+            }
+            setRecyclerViewLayoutManager(mCurrentLayoutManagerType);
+
+            ArrayList<Object> items3 = new ArrayList<>();
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+            items3.add(new TeamBuilderSet());
+
+            Object main = getActivity();
+            main = (MainActTwo ) main;
+
+            mAdapter = new CustomAdapter(getContext(), mDataset, items3, main);
+            //set custom adapter
+            mRecyclerView.setAdapter(mAdapter);
+
+
+            return rootView ;
+        }
+        @Override
+        public void onValueSelected(Entry e, Highlight h) {
+
+        }
+
+        @Override
+        public void onNothingSelected() {
+
+        }
+
+
+        /**
+         * Set RecyclerView's LayoutManager to the one given.
+         *
+         * @param layoutManagerType Type of layout manager to switch to.
+         */
+        public void setRecyclerViewLayoutManager(LayoutManagerType layoutManagerType) {
+            int scrollPosition = 0;
+
+            // If a layout manager has already been set, get current scroll position.
+            if (mRecyclerView.getLayoutManager() != null) {
+                scrollPosition = ((LinearLayoutManager) mRecyclerView.getLayoutManager())
+                        .findFirstCompletelyVisibleItemPosition();
+            }
+
+            switch (layoutManagerType) {
+                case GRID_LAYOUT_MANAGER:
+                    mLayoutManager = new GridLayoutManager(getActivity(), SPAN_COUNT);
+                    mCurrentLayoutManagerType = LayoutManagerType.GRID_LAYOUT_MANAGER;
+                    break;
+                case LINEAR_LAYOUT_MANAGER:
+                    mLayoutManager = new LinearLayoutManager(getActivity());
+                    mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
+                    break;
+                default:
+                    mLayoutManager = new LinearLayoutManager(getActivity());
+                    mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
+            }
+
+            mRecyclerView.setLayoutManager(mLayoutManager);
+            mRecyclerView.scrollToPosition(scrollPosition);
+        }
+
+        @Override
+        public void onSaveInstanceState(Bundle savedInstanceState) {
+            // Save currently selected layout manager.
+            savedInstanceState.putSerializable(KEY_LAYOUT_MANAGER, mCurrentLayoutManagerType);
+            super.onSaveInstanceState(savedInstanceState);
+        }
+
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item){
+            Intent myIntent = new Intent(getContext(), RecyclerViewFragment.class);
+            startActivityForResult(myIntent, 0);
+            return true;
+        }
+
+
+    }
+
+
+    public class ZoomOutPageTransformer implements ViewPager2.PageTransformer {
+        private static final float MIN_SCALE = 0.85f;
+        private static final float MIN_ALPHA = 0.5f;
+
+        public void transformPage(View view, float position) {
+            int pageWidth = view.getWidth();
+            int pageHeight = view.getHeight();
+
+            if (position < -1) { // [-Infinity,-1)
+                // This page is way off-screen to the left.
+                view.setAlpha(0f);
+
+            } else if (position <= 1) { // [-1,1]
+                // Modify the default slide transition to shrink the page as well
+                float scaleFactor = Math.max(MIN_SCALE, 1 - Math.abs(position));
+                float vertMargin = pageHeight * (1 - scaleFactor) / 2;
+                float horzMargin = pageWidth * (1 - scaleFactor) / 2;
+                if (position < 0) {
+                    view.setTranslationX(horzMargin - vertMargin / 2);
+                } else {
+                    view.setTranslationX(-horzMargin + vertMargin / 2);
+                }
+
+                // Scale the page down (between MIN_SCALE and 1)
+                view.setScaleX(scaleFactor);
+                view.setScaleY(scaleFactor);
+
+                // Fade the page relative to its size.
+                view.setAlpha(MIN_ALPHA +
+                        (scaleFactor - MIN_SCALE) /
+                                (1 - MIN_SCALE) * (1 - MIN_ALPHA));
+
+            } else { // (1,+Infinity]
+                // This page is way off-screen to the right.
+                view.setAlpha(0f);
+            }
+        }
+    }
+
+    private class SearchableList{
+        private ArrayList<ChampDisplayTuple> arrayList;
+
+        public SearchableList(){
+            arrayList = new ArrayList<>();
+        }
+
+        public void push(ChampDisplayTuple tuple){
+            arrayList.add(tuple);
+
+        }
+        public boolean containsChampionId(int id){
+            for (int i =0; i <arrayList.size(); i++){
+                if (arrayList.get(i).champId == id){
+                    return true;
+                }
+            }
+            return false;
+        }
+        public void removeByDisplayId(int id){
+            for (int i =0; i<arrayList.size();i++){
+                if (arrayList.get(i).dispId==id){
+                    arrayList.remove(i);
+                    break;
+                }
+            }
+        }
+
+
+     /*
+        public ArrayList<Entry> getChartData(){
+            ArrayList<Entry> ret = new ArrayList<>();
+            for (int i=0; i<arrayList.size();i++){
+                Entry entry = new Entry(arrayList.get(i).);
+            }
+      */
+
+    }
+    private class ChampDisplayTuple{
+        public int champId, //global id of the champion
+                dispId;     //id in the display when selected.
+        public int hp, dps;
+
+
+        public ChampDisplayTuple(int chId, int displayId){
+            champId=chId;
+            dispId=displayId;
+        }
+
+       /*
+        public ChampDisplayTuple(int chId, int displayId){
+            champId=chId;
+            dispId=displayId;
+        }
+        */
+
+
+    }
+
+
+
+    class ViewHolder extends RecyclerView.ViewHolder{
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+        }
+    }
 
 }

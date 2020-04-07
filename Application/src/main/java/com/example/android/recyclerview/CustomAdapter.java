@@ -26,6 +26,7 @@ import com.nightonke.boommenu.BoomMenuButton;
 import com.nightonke.boommenu.ButtonEnum;
 import com.nightonke.boommenu.Piece.PiecePlaceEnum;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
@@ -525,11 +526,8 @@ Chrono.add(Thresh);
         StripTitles.add("Void");
         StripTitles.add("Blaster");
         StripTitles.add("Blademasters");
-
-
         StripTitles.add("Celestials");
         StripTitles.add("Brawlers");
-        StripTitles.add("Cybernetic");
         StripTitles.add("Chrono");
         StripTitles.add("Cybernetic");
         StripTitles.add("DarkStar");
@@ -546,14 +544,139 @@ Chrono.add(Thresh);
         StripTitles.add("StarGuardian");
         StripTitles.add("SpacePirate");
         StripTitles.add("Starship");
-
         StripTitles.add("Valkyrie");
-
         StripTitles.add("Vanguard");
 
 
     }
 
+    /**For holding items in a recyclerview
+     *
+     * @param baseCont
+     * @param items
+     * @param mainAct
+     */
+    public CustomAdapter(Context baseCont, ArrayList<Object> items, Object mainAct){
+        this.baseCont = baseCont;
+        mDataSet = new String[10];
+        this.items = items;
+        this.mainAct = mainAct;
+
+        All = new ArrayList<>();
+        Iconsets = new ArrayList<>();
+        StripTitles = new ArrayList<>();
+
+        champBorderColors = new Integer[1];
+        champBorderColors[0] = Color.YELLOW;
+        int iterator =0;
+
+/*0*/        ItemBase BFSword = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator);iterator++;
+/*1  */      ItemBase RecurveBow = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator); iterator++;
+/*2  */     ItemBase ChainVest = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator );iterator++;
+/*3  */     ItemBase NegatronCloak = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator);iterator++;
+/*4  */     ItemBase SpellRod = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator);iterator++;
+/*5  */     ItemBase ManaTear = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator);iterator++;
+/*6  */     ItemBase GiantBelt = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator);iterator++;
+/*7  */     ItemBase Spatular = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator);iterator++;
+/*8  */     ItemBase Gloves = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator);iterator++;
+
+/*9  */     ItemBase InfinityEdge = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator,8,0);iterator++;
+/*10 */     ItemBase GuardianAngel = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator,0,2);iterator++;
+/*11 */
+/*12 */
+/*13 */
+/*14 */
+/*15 */
+/*16 */
+/*17 */
+/*18 */
+/*19 */
+/*20 */
+/*21 */
+/*22 */
+/*23 */
+/*24 */
+/*25 */
+/*26 */
+/*27 */
+/*28 */
+/*29 */
+/*30 */
+/*31 */
+/*32 */
+/*33 */
+/*34 */
+/*35 */
+/*36 */
+/*37 */
+/*38 */
+/*39 */
+/*40 */
+/*41 */
+/*42 */
+/*43 */
+/*44 */
+/*45 */
+/*46 */
+/*47 */
+/*48 */
+/*49 */
+/*50 */
+/*51 */
+/*52 */
+/*53 */
+/*54 */
+/*55 */
+/*56 */
+/*57 */
+/*58 */
+/*59 */
+/*60 */
+/*61 */
+/*62 */
+/*63 */
+/*64 */
+/*65 */
+/*66 */
+/*67 */
+/*68 */
+/*69 */
+/*70 */
+/*71 */
+/*72 */
+/*73 */
+/*74 */
+/*75 */
+/*76 */
+/*77 */
+/*78 */
+/*79 */
+/*80 */
+/*81 */
+/*82 */
+/*83 */
+/*84 */
+/*85 */
+/*86 */
+/*87 */
+/*88 */
+/*89 */
+/*90 */
+/*91 */
+/*92 */
+/*93 */
+/*94 */
+/*95 */
+/*96 */
+/*97 */
+/*98 */
+/*99 */
+/*100*/
+/*101*/
+/*102*/
+/*103*/
+
+    }
     // BEGIN_INCLUDE(recyclerViewOnCreateViewHolder)
     // Create new views (invoked by the layout manager)
     @Override
@@ -609,7 +732,6 @@ Chrono.add(Thresh);
         //setup Boom button.
         switch (viewHolder.getItemViewType()){
             case 1:
-
               ViewHolder vh1 = (ViewHolder) viewHolder;
               configureViewHolder(vh1, position);
               break;
@@ -621,9 +743,11 @@ Chrono.add(Thresh);
             case 3:
                 ViewHolder2 vh2 = (ViewHolder2)viewHolder;
                 configureViewHolder2(vh2,position);
+                break;
             case 4:
                 ViewHolder3 vh3 = (ViewHolder3)viewHolder;
                 configureViewHolder3(vh3,position);
+                break;
             case -1:
                 return;
             default:
