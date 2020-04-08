@@ -65,6 +65,7 @@ public class CustomAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     private Integer [] champBorderColors;
 
     private static ArrayList<ChampBase> All;
+    private static ArrayList<ItemBase> AllItems;
     // BEGIN_INCLUDE(recyclerViewSampleViewHolder)
     /**
      * Provide a reference to the type of views that you are using (custom ViewHolder)
@@ -570,112 +571,119 @@ Chrono.add(Thresh);
         champBorderColors[0] = Color.YELLOW;
         int iterator =0;
 
-/*0*/        ItemBase BFSword = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator);iterator++;
-/*1  */      ItemBase RecurveBow = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator); iterator++;
-/*2  */     ItemBase ChainVest = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator );iterator++;
-/*3  */     ItemBase NegatronCloak = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator);iterator++;
-/*4  */     ItemBase SpellRod = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator);iterator++;
-/*5  */     ItemBase ManaTear = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator);iterator++;
-/*6  */     ItemBase GiantBelt = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator);iterator++;
-/*7  */     ItemBase Spatular = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator);iterator++;
-/*8  */     ItemBase Gloves = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator);iterator++;
+/*0*/        ItemBase BFSword = new ItemBase(R.drawable.bf_sword,123,123,iterator);iterator++;
+/*1  */      ItemBase RecurveBow = new ItemBase(R.drawable.steel_stiletto,123,123,iterator); iterator++;
+/*2  */     ItemBase ChainVest = new ItemBase(R.drawable.chain_vest,123,123,iterator );iterator++;
+/*3  */     ItemBase NegatronCloak = new ItemBase(R.drawable.elementium_woven_mantle,123,123,iterator);iterator++;
+/*4  */     ItemBase SpellRod = new ItemBase(R.drawable.needlessly_large_wand,123,123,iterator);iterator++;
+/*5  */     ItemBase ManaTear = new ItemBase(R.drawable.tear_of_the_goddess,123,123,iterator);iterator++;
+/*6  */     ItemBase GiantBelt = new ItemBase(R.drawable.mmmmmqqqqq1011_mighty_waistband_of_the_reaver,123,123,iterator);iterator++;
+/*7  */     ItemBase Spatular = new ItemBase(R.drawable.Spatula,123,123,iterator);iterator++;
+/*8  */     ItemBase Gloves = new ItemBase(R.drawable.brawlers_gloves,123,123,iterator);iterator++;
 
-/*9  */     ItemBase InfinityEdge = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator,8,0);iterator++;
-/*10 */     ItemBase GuardianAngel = new ItemBase(R.drawable.tft3_ahri_mobile_,123,123,iterator,0,2);iterator++;
-/*11 */
-/*12 */
-/*13 */
-/*14 */
-/*15 */
-/*16 */
-/*17 */
-/*18 */
-/*19 */
-/*20 */
-/*21 */
-/*22 */
-/*23 */
-/*24 */
-/*25 */
-/*26 */
-/*27 */
-/*28 */
-/*29 */
-/*30 */
-/*31 */
-/*32 */
-/*33 */
-/*34 */
-/*35 */
-/*36 */
-/*37 */
-/*38 */
-/*39 */
-/*40 */
-/*41 */
-/*42 */
-/*43 */
-/*44 */
-/*45 */
-/*46 */
-/*47 */
-/*48 */
-/*49 */
-/*50 */
-/*51 */
-/*52 */
-/*53 */
-/*54 */
-/*55 */
-/*56 */
-/*57 */
-/*58 */
-/*59 */
-/*60 */
-/*61 */
-/*62 */
-/*63 */
-/*64 */
-/*65 */
-/*66 */
-/*67 */
-/*68 */
-/*69 */
-/*70 */
-/*71 */
-/*72 */
-/*73 */
-/*74 */
-/*75 */
-/*76 */
-/*77 */
-/*78 */
-/*79 */
-/*80 */
-/*81 */
-/*82 */
-/*83 */
-/*84 */
-/*85 */
-/*86 */
-/*87 */
-/*88 */
-/*89 */
-/*90 */
-/*91 */
-/*92 */
-/*93 */
-/*94 */
-/*95 */
-/*96 */
-/*97 */
-/*98 */
-/*99 */
-/*100*/
-/*101*/
-/*102*/
-/*103*/
+/*9  */     ItemBase InfinityEdge = new ItemBase(R.drawable.infinity_edge,123,123,iterator,8,0);iterator++;
+/*10 */     ItemBase GuardianAngel = new ItemBase(R.drawable.guardian_angel,123,123,iterator,0,2);iterator++;
+/*11 */     ItemBase Bloodthirster = new ItemBase(R.drawable.the_bloodthirster,123,123,iterator,0,3);iterator++;
+/*12 */     ItemBase HexGunblade = new ItemBase(R.drawable.hextech_gunblade,123,123,iterator,0,4);iterator++;
+/*13 */     ItemBase Shojin = new ItemBase(R.drawable.gugnir,123,123,iterator,0,5);iterator++;
+/*14 */     ItemBase ZekeHerald = new ItemBase(R.drawable.ZekesHerald,123,123,iterator,0,6);iterator++;
+/*15 */     ItemBase BladeoftheRunedKing = new ItemBase(R.drawable.blade_of_the_ruined_king,123,123,iterator,0,7);iterator++;
+/*16 */     ItemBase RapidFirecannon = new ItemBase(R.drawable.rapid_firecannon,123,123,iterator,1,1);iterator++;
+/*17 */     ItemBase Hurricane = new ItemBase(R.drawable.runaans_hurricane,123,123,iterator,1,2);iterator++;
+/*18 */     ItemBase Rageblade = new ItemBase(R.drawable.guinsoos_rageblade,123,123,iterator,1,4);iterator++;
+/*19 */     ItemBase StatikkShiv = new ItemBase(R.drawable.statikk_shiv,123,123,iterator,1,5);iterator++;
+/*20 */     ItemBase ZZrotPortal = new ItemBase(R.drawable.ZzRotPortal,123,123,iterator,1,6);iterator++;
+/*21 */     ItemBase InfiltratorTalons = new ItemBase(R.drawable.InfiltratorsTalons,123,123,iterator,1,7);iterator++;
+/*22 */     ItemBase SwordBreaker = new ItemBase(R.drawable.SwordBreaker,123,123,iterator,2,3);iterator++;
+/*23 */     ItemBase LocketofSolari = new ItemBase(R.drawable.crest_of_the_iron_solari,123,123,iterator,2,4);iterator++;
+/*24 */     ItemBase FrozenHeart = new ItemBase(R.drawable.frozen_heart,123,123,iterator,2,5);iterator++;
+/*25 */     ItemBase RedBuff = new ItemBase(R.drawable.RedBuff,123,123,iterator,2,6);iterator++;
+/*26 */     ItemBase RebelMedal = new ItemBase(R.drawable.RebelMedal,123,123,iterator,2,7);iterator++;
+/*27 */     ItemBase DragonClaw = new ItemBase(R.drawable.DragonsClaw,123,123,iterator,3,3);iterator++;
+/*28 */     ItemBase IonicSpark = new ItemBase(R.drawable.ionicspark,123,123,iterator,3,4);iterator++;
+/*29 */     ItemBase ChaliceofFavor = new ItemBase(R.drawable.ChaliceofFavor,123,123,iterator,3,5);iterator++;
+/*30 */     ItemBase Zephyr = new ItemBase(R.drawable.zephyr,123,123,iterator,3,6);iterator++;
+/*31 */     ItemBase CelestialOrb = new ItemBase(R.drawable.CelestialOrb,123,123,iterator,3,7);iterator++;
+/*32 */     ItemBase Rabadon = new ItemBase(R.drawable.banksys_wizard_hat,123,123,iterator,4,4);iterator++;
+/*33 */     ItemBase LudenEcho = new ItemBase(R.drawable.ludens_echo,123,123,iterator,4,5);iterator++;
+/*34 */     ItemBase Morellonomicon = new ItemBase(R.drawable.pox_arcana,123,123,iterator,4,6);iterator++;
+/*35 */     ItemBase DemolitionistTrait = new ItemBase(R.drawable.DemolitionistsCharge,123,123,iterator,4,7);iterator++;
+/*36 */     ItemBase SeraphEmbrace = new ItemBase(R.drawable.seraphs_embrace,123,123,iterator,5,5);iterator++;
+/*37 */     ItemBase Redemption = new ItemBase(R.drawable.guardian_angel,123,123,iterator,5,6);iterator++;
+/*38 */     ItemBase StarGuardianTrait = new ItemBase(R.drawable.StarGuardiansCharm,123,123,iterator,5,7);iterator++;
+/*39 */     ItemBase Warmog = new ItemBase(R.drawable.warmog_the_living_armor,123,123,iterator,6,6);iterator++;
+/*40 */     ItemBase ProtectorTrait = new ItemBase(R.drawable.ProtectorsChestguard,123,123,iterator,6,7);iterator++;
+/*41 */     ItemBase ForceofNature = new ItemBase(R.drawable.ForceofNature,123,123,iterator,7,7);iterator++;
+/*42 */     ItemBase ShroudofStillness = new ItemBase(R.drawable.ShroudofStillness,123,123,iterator,2,8);iterator++;
+/*43 */     ItemBase Quicksilver = new ItemBase(R.drawable.Quicksilver,123,123,iterator,3,8);iterator++;
+/*44 */     ItemBase SpellCritGauntlets = new ItemBase(R.drawable.JeweledGauntlet,123,123,iterator,4,8);iterator++;
+/*45 */     ItemBase HandofJustice = new ItemBase(R.drawable.HandofJustice,123,123,iterator,5,8);iterator++;
+/*46 */     ItemBase TrapClaw = new ItemBase(R.drawable.TrapClaw,123,123,iterator,6,8);iterator++;
+/*47 */     ItemBase DarkStarHeart = new ItemBase(R.drawable.DarkStarsHeart,123,123,iterator,7,8);iterator++;
+/*48 */     ItemBase ThiefGloves = new ItemBase(R.drawable.ThiefsGloves,123,123,iterator,8,8);iterator++;
+/*49 */     ItemBase Deathblade = new ItemBase(R.drawable.Deathblade,123,123,iterator,0,0);iterator++;
+/*50 */     ItemBase GiantSlayer = new ItemBase(R.drawable.giant_slayer,123,123,iterator,0,1);iterator++;
+/*51 */     ItemBase TitanResolve = new ItemBase(R.drawable.TitansResolve,123,123,iterator,1,2);iterator++;
+/*52 */     ItemBase BrambleVest = new ItemBase(R.drawable.bramble_vest,123,123,iterator,2,2);iterator++;
+/*53 */     ItemBase ArmorPenCrossbow = new ItemBase(R.drawable.guardian_angel,123,123,iterator,1,8);iterator++;
 
+//missing neekos and one more item.
+
+
+        AllItems.add(BFSword );
+        AllItems.add(RecurveBow );
+        AllItems.add(ChainVest );
+        AllItems.add(NegatronCloak );
+        AllItems.add(SpellRod );
+        AllItems.add(ManaTear );
+        AllItems.add(GiantBelt );
+        AllItems.add(Spatular );
+        AllItems.add(Gloves );
+        AllItems.add(InfinityEdge );
+        AllItems.add(GuardianAngel );
+        AllItems.add(Bloodthirster );
+        AllItems.add(HexGunblade );
+        AllItems.add(Shojin );
+        AllItems.add(ZekeHerald );
+        AllItems.add(BladeoftheRunedKing );
+        AllItems.add(RapidFirecannon );
+        AllItems.add(Hurricane );
+        AllItems.add(Rageblade );
+        AllItems.add(StatikkShiv );
+        AllItems.add(ZZrotPortal );
+        AllItems.add(InfiltratorTalons );
+        AllItems.add(SwordBreaker );
+        AllItems.add(LocketofSolari );
+        AllItems.add(FrozenHeart );
+        AllItems.add(RedBuff );
+        AllItems.add(RebelMedal );
+        AllItems.add(DragonClaw );
+        AllItems.add(IonicSpark );
+        AllItems.add(ChaliceofFavor );
+        AllItems.add(Zephyr );
+        AllItems.add(CelestialOrb );
+        AllItems.add(Rabadon );
+        AllItems.add(LudenEcho );
+        AllItems.add(Morellonomicon );
+        AllItems.add(DemolitionistTrait );
+        AllItems.add(SeraphEmbrace );
+        AllItems.add(Redemption );
+        AllItems.add(StarGuardianTrait );
+        AllItems.add(Warmog );
+        AllItems.add(ProtectorTrait );
+        AllItems.add(ForceofNature );
+        AllItems.add(ShroudofStillness );
+        AllItems.add(Quicksilver );
+        AllItems.add(SpellCritGauntlets );
+        AllItems.add(HandofJustice );
+        AllItems.add(TrapClaw );
+        AllItems.add(DarkStarHeart );
+        AllItems.add(ThiefGloves );
+        AllItems.add(Deathblade );
+        AllItems.add(GiantSlayer );
+        AllItems.add(TitanResolve );
+        AllItems.add(BrambleVest );
+        AllItems.add(ArmorPenCrossbow );
     }
     // BEGIN_INCLUDE(recyclerViewOnCreateViewHolder)
     // Create new views (invoked by the layout manager)
@@ -705,6 +713,12 @@ Chrono.add(Thresh);
                 View v4 = inflater.inflate(R.layout.team_builder_icon_set,viewGroup,false)  ;
                 viewHolder = new ViewHolder3(v4);
                 break;
+
+            case 5:
+                View v5 = inflater.inflate(R.layout.team_builder_icon_set,viewGroup,false);
+                viewHolder=new ViewHolder3(v5);
+                break;
+
             default:
                     View v0 = inflater.inflate(R.layout.text_row_item, viewGroup, false);
                     viewHolder = new ViewHolder(v0);
@@ -747,6 +761,10 @@ Chrono.add(Thresh);
             case 4:
                 ViewHolder3 vh3 = (ViewHolder3)viewHolder;
                 configureViewHolder3(vh3,position);
+                break;
+            case 5:
+                ViewHolder3 vh5 = (ViewHolder3)viewHolder;
+                configureViewHolder5(vh5,position);
                 break;
             case -1:
                 return;
@@ -859,6 +877,12 @@ Chrono.add(Thresh);
 
         }
     }
+
+    private void configureViewHolder5(ViewHolder3 vh5, int position) {
+
+    }
+
+
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
@@ -875,6 +899,8 @@ Chrono.add(Thresh);
                 return 3;
             }else if(items.get(pos) instanceof  TeamBuilderSet) {
                 return 4;
+            }else if(items.get(pos) instanceof ItemBuilderSet ){
+                return 5;
             }
             return 1;
         }
