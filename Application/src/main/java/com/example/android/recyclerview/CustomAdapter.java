@@ -42,6 +42,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.lang.reflect.Array;
+import java.security.Guard;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,6 +59,8 @@ public class CustomAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     private Object mainAct;
 
     private ArrayList<ArrayList<ChampBase>> Iconsets;
+    private ArrayList<ArrayList<ItemBase>>  item_Iconsets;
+
     private ArrayList<String> StripTitles ;
 
     private static int iter =0; //iterate over icons
@@ -208,6 +211,8 @@ public class CustomAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             All = new ArrayList<>();
 
         Iconsets = new ArrayList<>();
+        item_Iconsets = new ArrayList<>();
+
         StripTitles = new ArrayList<>();
 
         champBorderColors = new Integer[5];
@@ -684,6 +689,94 @@ Chrono.add(Thresh);
         AllItems.add(TitanResolve );
         AllItems.add(BrambleVest );
         AllItems.add(ArmorPenCrossbow );
+
+        //categorize items into great good decent etc..
+        ArrayList<ItemBase> great = new ArrayList<>();
+        ArrayList<ItemBase> good = new ArrayList<>();
+        ArrayList<ItemBase> neutral = new ArrayList<>();
+        ArrayList<ItemBase> bad = new ArrayList<>();
+        ArrayList<ItemBase> terrible = new ArrayList<>();
+        ArrayList<ItemBase> terrible1 = new ArrayList<>();
+        ArrayList<ItemBase> terrible2 = new ArrayList<>();
+
+        great.add(Spatular);
+        great.add(Gloves);
+        great.add(GiantBelt);
+        great.add(ManaTear);
+        great.add(SpellRod);
+        great.add(NegatronCloak);
+        great.add(ChainVest);
+        great.add(RecurveBow);
+
+        good.add(BFSword);
+        good.add(InfinityEdge);
+        good.add(GuardianAngel);
+        good.add(Bloodthirster);
+        good.add(HexGunblade);
+        good.add(Shojin);
+        good.add(ZekeHerald);
+        good.add(BladeoftheRunedKing);
+        good.add(RapidFirecannon);
+
+        neutral.add(Hurricane);
+        neutral.add(Rageblade);
+        neutral.add(StatikkShiv);
+        neutral.add(ZZrotPortal);
+        neutral.add(InfiltratorTalons);
+        neutral.add(SwordBreaker);
+        neutral.add(LocketofSolari);
+        neutral.add(FrozenHeart);
+
+        bad.add(RedBuff);
+        bad.add(DragonClaw);
+        bad.add(IonicSpark);
+        bad.add(ChaliceofFavor);
+        bad.add(Zephyr);
+        bad.add(CelestialOrb);
+        bad.add(Rabadon);
+        bad.add(LudenEcho   );
+
+        terrible.add(Morellonomicon);
+        terrible.add(DemolitionistTrait);
+        terrible.add(SeraphEmbrace);
+        terrible.add(Redemption);
+        terrible.add(StarGuardianTrait);
+        terrible.add(Warmog);
+        terrible.add(ProtectorTrait);
+        terrible.add(ForceofNature);
+
+        terrible1.add(ShroudofStillness);
+        terrible1.add(Quicksilver);
+        terrible1.add(SpellCritGauntlets);
+        terrible1.add(HandofJustice);
+        terrible1.add(TrapClaw);
+        terrible1.add(DarkStarHeart);
+        terrible1.add(ThiefGloves);
+        terrible1.add(Deathblade);
+
+        terrible2.add(GiantSlayer);
+        terrible2.add(TitanResolve);
+        terrible2.add(BrambleVest);
+        terrible2.add(ArmorPenCrossbow);
+
+        item_Iconsets.add(great);
+        item_Iconsets.add(good  );
+        item_Iconsets.add(neutral);
+        item_Iconsets.add(bad   );
+        item_Iconsets.add(terrible);
+        item_Iconsets.add(terrible1 );
+        item_Iconsets.add(terrible2 );
+
+        StripTitles.add("Base Items");
+        StripTitles.add("Good Items");
+        StripTitles.add("Decent Items");
+        StripTitles.add("Neutral ");
+        StripTitles.add("Bad items");
+        StripTitles.add("Misc Items 1");
+        StripTitles.add("Misc Items 2");
+
+
+
     }
     // BEGIN_INCLUDE(recyclerViewOnCreateViewHolder)
     // Create new views (invoked by the layout manager)
@@ -879,6 +972,54 @@ Chrono.add(Thresh);
     }
 
     private void configureViewHolder5(ViewHolder3 vh5, int position) {
+        TextView title = vh5.getTitle();
+        if (position< StripTitles.size()){
+
+            title.setText(StripTitles.get(position));
+        }else   {
+            title.setText("Default");
+        }
+
+        //clear previous icons
+        for (int i=0; i < vh5.items.length ;i ++){
+            vh5.items[i].setImageBitmap(null);
+            vh5.items[i].destroyDrawingCache();
+            vh5.items[i].setBackgroundColor(Color.BLACK);
+
+        }
+
+        if (position < item_Iconsets.size()) { //dont go past the list
+
+            for (int i = 0; i < item_Iconsets.get(position).size(); i++) {
+                int Id = item_Iconsets.get(position).get(i).iconId;
+                int tag =item_Iconsets.get(position).get(i).internalId;
+
+                vh5.items[i].setImageResource(Id);
+                //tag it
+                vh5.items[i].setTag(tag); //position * 10 + i
+
+                vh5.items[i].setBackgroundColor(
+                        champBorderColors[Iconsets.get(position).get(i).getRarity()]
+                );
+
+
+                vh5.items[i].setClickable(true);
+                vh5.items[i].setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        int x = (Integer) v.getTag();
+
+                        //add this to the board!
+                        //update graph data.
+                        mainAct = (MainActTwo) mainAct;
+                        ((MainActTwo) mainAct).RecyclerViewChampions_OnClick(
+                                x,All.get(x) );
+                    }
+                });
+            }
+
+
+        }
 
     }
 

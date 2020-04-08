@@ -11,117 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d58640bd-f827-4805-ae15-3a09b4865005" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/recyclerview/ItemBuilderSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/CelestialOrb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/ChaliceofFavor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/DarkStarsHeart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/Deathblade.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/DemolitionistsCharge.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/DragonsClaw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/ForceofNature.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/HandofJustice.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/InfiltratorsTalons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/JeweledGauntlet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/ProtectorsChestguard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/Quicksilver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/RebelMedal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/RedBuff.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/ShroudofStillness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/Spatula.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/StarGuardiansCharm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/SwordBreaker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/ThiefsGloves.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/TitansResolve.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/TrapClaw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/ZekesHerald.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/ZzRotPortal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/banksys_wizard_hat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/bf_sword.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/blade_of_the_ruined_king.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/bramble_vest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/brawlers_gloves.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/chain_vest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/crest_of_the_iron_solari.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/elementium_woven_mantle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/frozen_heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/giant_slayer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/guardian_angel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/gugnir.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/guinsoos_rageblade.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/hextech_gunblade.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/infinity_edge.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/ionicspark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/1011_mighty_waistband_of_the_reaver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/1031_chain_vest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/1038_bf_sword.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/1043_steel_stiletto.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/1051_brawlers_gloves.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/1058_needlessly_large_wand.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/161_elementium_woven_mantle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3026_guardian_angel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3031_infinity_edge.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3033_mortal_reminder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3034_giant_slayer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3040_seraphs_embrace.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3049_prismatic_sphere.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3070_tear_of_the_goddess.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3072_the_bloodthirster.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3076_bramble_vest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3082_wardens_mail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3083_warmog_the_living_armor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3085_runaans_hurricane.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3087_statikk_shiv.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3089_banksys_wizard_hat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3094_rapid_firecannon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3110_frozen_heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3124_guinsoos_rageblade.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3146_hextech_gunblade.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3153_blade_of_the_ruined_king.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3161_gugnir.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3172_zephyr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3178_ionicspark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3190_crest_of_the_iron_solari.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3285_ludens_echo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/3434_pox_arcana.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/CelestialOrb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/ChaliceofFavor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/DarkStarsHeart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/Deathblade.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/DemolitionistsCharge.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/DragonsClaw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/ForceofNature.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/HandofJustice.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/InfiltratorsTalons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/JeweledGauntlet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/ProtectorsChestguard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/Quicksilver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/RebelMedal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/RedBuff.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/ShroudofStillness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/Spatula.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/StarGuardiansCharm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/SwordBreaker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/ThiefsGloves.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/TitansResolve.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/TrapClaw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/ZekesHerald.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/items/ZzRotPortal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/ludens_echo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/mmmmmqqqqq1011_mighty_waistband_of_the_reaver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/mortal_reminder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/needlessly_large_wand.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/pox_arcana.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/prismatic_sphere.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/rapid_firecannon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/runaans_hurricane.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/seraphs_embrace.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/statikk_shiv.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/steel_stiletto.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/tear_of_the_goddess.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/the_bloodthirster.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/wardens_mail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/warmog_the_living_armor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/zephyr.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/recyclerview/CustomAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/recyclerview/CustomAdapter.java" afterDir="false" />
     </list>
@@ -329,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586290077410</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="further work on item selection view.">
+      <created>1586338448948</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1586338448948</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -363,7 +259,8 @@
     <MESSAGE value="ADDED CONTEXT CLASS TO NEW ACTIVITY CREATED BY CLICKING BUTTON112 3" />
     <MESSAGE value="snow man, ice cream shit" />
     <MESSAGE value="started working on icons view, do other views" />
-    <option name="LAST_COMMIT_MESSAGE" value="started working on icons view, do other views" />
+    <MESSAGE value="further work on item selection view." />
+    <option name="LAST_COMMIT_MESSAGE" value="further work on item selection view." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -380,17 +277,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/recyclerview/CustomAdapter.java</url>
-          <line>761</line>
+          <line>854</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/recyclerview/CustomAdapter.java</url>
-          <line>898</line>
+          <line>1039</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/recyclerview/CustomAdapter.java</url>
-          <line>900</line>
+          <line>1041</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
