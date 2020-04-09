@@ -1,15 +1,15 @@
 [
     {
-        "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_tft3_vi_mobile_.png.flat",
-        "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable/tft3_vi_mobile_.png"
+        "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable-xxhdpi/ic_launcher.png"
     },
     {
         "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_tft3_mordekaiser_mobile_.png.flat",
         "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable/tft3_mordekaiser_mobile_.png"
     },
     {
-        "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_launcher.png.flat",
-        "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable-xxhdpi/ic_launcher.png"
+        "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_tft3_vi_mobile_.png.flat",
+        "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable/tft3_vi_mobile_.png"
     },
     {
         "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_tft3_ashe_mobile_.png.flat",
@@ -144,12 +144,12 @@
         "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable/wardens_mail.png"
     },
     {
-        "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_frozen_heart.png.flat",
-        "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable/frozen_heart.png"
-    },
-    {
         "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_marker2.png.flat",
         "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable/marker2.png"
+    },
+    {
+        "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_frozen_heart.png.flat",
+        "source": "/home/leo/Desktop/android/myapp/RecyclerView/Application/src/main/res/drawable/frozen_heart.png"
     },
     {
         "merged": "/home/leo/Desktop/android/myapp/RecyclerView/Application/build/intermediates/res/merged/debug/drawable_brawlers_gloves.png.flat",

@@ -95,6 +95,7 @@ public class MainActTwo extends FragmentActivity implements
 
     private ImageView [] champ_slots;
     private ImageView [] itemSlotsForChamps;
+    private ItemBase [] itemsAddedToChamps;
     private ChampBase iconsDb;
 
     protected Typeface tfRegular;
@@ -154,6 +155,8 @@ public class MainActTwo extends FragmentActivity implements
 
     private Integer champSelectedForItems;
 
+    private ArrayList<Integer> slotCounterArray;
+
     @Override
     protected  void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -208,11 +211,57 @@ public class MainActTwo extends FragmentActivity implements
         champ_slots[8] = (ImageView)findViewById(R.id.imageView12);
         champ_slots[9] = (ImageView)findViewById(R.id.imageView13);
 
+        champSelectedForItems =0;
+        slotCounterArray = new ArrayList<>(10);
+        itemsAddedToChamps = new ItemBase[30];//holds items user adds to champions on board.
+
+        slotCounterArray.add(0);
+        slotCounterArray.add(0);
+        slotCounterArray.add(0);
+        slotCounterArray.add(0);
+        slotCounterArray.add(0);
+        slotCounterArray.add(0);
+        slotCounterArray.add(0);
+        slotCounterArray.add(0);
+        slotCounterArray.add(0);
+        slotCounterArray.add(0);
+        slotCounterArray.add(0);
+
         //-------------------
         itemSlotsForChamps[0] = (ImageView)findViewById(R.id.ch1icon1);
         itemSlotsForChamps[1] = (ImageView)findViewById(R.id.ch1icon2);
         itemSlotsForChamps[2] = (ImageView)findViewById(R.id.ch1icon3);
+        itemSlotsForChamps[3 ] = (ImageView)findViewById(R.id.ch2icon1);
+        itemSlotsForChamps[4 ] = (ImageView)findViewById(R.id.ch2icon2);
+        itemSlotsForChamps[5 ] = (ImageView)findViewById(R.id.ch2icon3);
+        itemSlotsForChamps[6 ] = (ImageView)findViewById(R.id.ch3icon1);
+        itemSlotsForChamps[7 ] = (ImageView)findViewById(R.id.chi3icon2);
+        itemSlotsForChamps[8 ] = (ImageView)findViewById(R.id.ch3icon3);
+        itemSlotsForChamps[9 ] = (ImageView)findViewById(R.id.ch4icon1);
+        itemSlotsForChamps[10] = (ImageView)findViewById(R.id.ch4icon2);
+        itemSlotsForChamps[11] = (ImageView)findViewById(R.id.ch4icon3);
+        itemSlotsForChamps[12] = (ImageView)findViewById(R.id.ch5icon1);
+        itemSlotsForChamps[13] = (ImageView)findViewById(R.id.ch5icon2);
+        itemSlotsForChamps[14] = (ImageView)findViewById(R.id.ch5icon3);
+        itemSlotsForChamps[15] = (ImageView)findViewById(R.id.ch6icon1);
+        itemSlotsForChamps[16] = (ImageView)findViewById(R.id.ch6icon2);
+        itemSlotsForChamps[17] = (ImageView)findViewById(R.id.ch6icon3);
+        itemSlotsForChamps[18] = (ImageView)findViewById(R.id.ch7icon1);
+        itemSlotsForChamps[19] = (ImageView)findViewById(R.id.ch7icon2);
+        itemSlotsForChamps[20] = (ImageView)findViewById(R.id.ch7icon3);
+        itemSlotsForChamps[21] = (ImageView)findViewById(R.id.ch8icon1);
+        itemSlotsForChamps[22] = (ImageView)findViewById(R.id.ch8icon2);
+        itemSlotsForChamps[23] = (ImageView)findViewById(R.id.ch8icon3);
+        itemSlotsForChamps[24] = (ImageView)findViewById(R.id.ch9icon1);
+        itemSlotsForChamps[25] = (ImageView)findViewById(R.id.ch9icon2);
+        itemSlotsForChamps[26] = (ImageView)findViewById(R.id.ch9icon3);
+        itemSlotsForChamps[27] = (ImageView)findViewById(R.id.ch10icon1);
+        itemSlotsForChamps[28] = (ImageView)findViewById(R.id.ch10icon2);
+        itemSlotsForChamps[29] = (ImageView)findViewById(R.id.ch10icon3);
 
+        for (int i =0; i <itemSlotsForChamps.length;i ++){
+            itemSlotsForChamps[i].setImageResource(R.drawable.infinity_edge);
+        }
 
         for(int i=0 ; i < champ_slots.length; i++){
             champ_slots[i].setImageResource(R.drawable.black_background);
@@ -251,6 +300,15 @@ public class MainActTwo extends FragmentActivity implements
                             emptySlots.push((Integer) v.getTag());//recycle the empty slot
                             //clear the icon from storage so it can appear again
                             champsClicked.removeByDisplayId(tag);
+
+                            //clear the items
+                            itemSlotsForChamps[tag*3].setImageResource(R.drawable.black_background);
+                            itemSlotsForChamps[tag*3+1].setImageResource(R.drawable.black_background);
+                            itemSlotsForChamps[tag*3+2].setImageResource(R.drawable.black_background);
+
+                            itemsAddedToChamps[(tag*3)] = null;
+                            itemsAddedToChamps[(tag*3+1)] = null;
+                            itemsAddedToChamps[(tag*3+2)] = null;
 
                         }
 
@@ -516,11 +574,34 @@ public class MainActTwo extends FragmentActivity implements
     }
 }
 
-public void RecyclerViewItems_OnClick(int a, ItemBase itemBase){
+    /**
+     * Id be nice to abstract this a bit more..
+     * @param a
+     * @param itemBase
+     */
+    public void RecyclerViewItems_OnClick(int a, ItemBase itemBase){
     Toast.makeText(this, String.valueOf(a), Toast.LENGTH_SHORT).show();
+    int idx = champSelectedForItems *3 ;
+
+    int temp = slotCounterArray.get(champSelectedForItems);
+    idx += temp;
+    temp++;
+    if (temp>2){
+        temp =0;
+    }
+    slotCounterArray.set(champSelectedForItems, temp    );
+
+
+    itemSlotsForChamps[idx].setImageResource(itemBase.iconId);
+    itemsAddedToChamps[idx] = itemBase;
+
+
 
 }
 
+private int getItemIndexFromSlotId(int slotId){
+        return slotId * 3;
+}
 private void setItemForChampInDisplaySlot(int slotid){
         if (viewSelectedState==1){
             //somehow insert items and display them for the given view in "slotid"

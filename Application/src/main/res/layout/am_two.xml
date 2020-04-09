@@ -249,6 +249,56 @@
 
         <ImageView
 
+            android:id="@+id/ch3icon1"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.314"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+        </ImageView>
+
+        <ImageView
+
+            android:id="@+id/ch5icon1"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+        </ImageView>
+
+        <ImageView
+
+            android:id="@+id/ch7icon1"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginStart="264dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <ImageView
+
+            android:id="@+id/ch9icon1"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginStart="340dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <ImageView
+
             android:id="@+id/ch2icon1"
             android:layout_width="13dp"
             android:layout_height="13dp"
@@ -263,12 +313,120 @@
 
         <ImageView
 
+            android:id="@+id/ch4icon1"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.314"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.618">
+
+        </ImageView>
+
+        <ImageView
+
+            android:id="@+id/ch6icon1"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.605">
+
+        </ImageView>
+
+        <ImageView
+
+            android:id="@+id/ch8icon1"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginStart="264dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.605">
+
+        </ImageView>
+
+        <ImageView
+
+            android:id="@+id/ch10icon1"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginStart="340dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.592">
+
+        </ImageView>
+
+        <ImageView
+
             android:id="@+id/ch2icon3"
             android:layout_width="13dp"
             android:layout_height="13dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.115"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ch2icon2"
+            app:layout_constraintVertical_bias="0.0">
+
+        </ImageView>
+
+        <ImageView
+
+            android:id="@+id/ch4icon3"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.314"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ch2icon2"
+            app:layout_constraintVertical_bias="0.0">
+
+        </ImageView>
+
+        <ImageView
+
+            android:id="@+id/ch6icon3"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ch2icon2"
+            app:layout_constraintVertical_bias="0.0">
+
+        </ImageView>
+
+        <ImageView
+
+            android:id="@+id/ch8icon3"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginStart="264dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ch2icon2"
+            app:layout_constraintVertical_bias="0.0">
+
+        </ImageView>
+
+        <ImageView
+
+            android:id="@+id/ch10icon3"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginStart="340dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ch2icon2"
             app:layout_constraintVertical_bias="0.0">
@@ -291,6 +449,64 @@
         </ImageView>
 
         <ImageView
+
+            android:id="@+id/ch4icon2"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.314"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ch2icon1"
+            app:layout_constraintVertical_bias="0.0">
+
+        </ImageView>
+
+        <ImageView
+
+            android:id="@+id/ch6icon2"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ch2icon1"
+            app:layout_constraintVertical_bias="0.0">
+
+        </ImageView>
+
+        <ImageView
+
+            android:id="@+id/ch8icon2"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginStart="264dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ch2icon1"
+            app:layout_constraintVertical_bias="0.0">
+
+        </ImageView>
+
+        <ImageView
+
+            android:id="@+id/ch10icon2"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginStart="340dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ch2icon1"
+            app:layout_constraintVertical_bias="0.0">
+
+        </ImageView>
+
+        <ImageView
             android:id="@+id/ch1icon2"
             android:layout_width="13dp"
             android:layout_height="13dp"
@@ -304,12 +520,112 @@
         </ImageView>
 
         <ImageView
+            android:id="@+id/chi3icon2"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.314"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.21">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/ch5icon2"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.21">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/ch7icon2"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginStart="264dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.21">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/ch9icon2"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginStart="340dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.21">
+
+        </ImageView>
+
+        <ImageView
             android:id="@+id/ch1icon3"
             android:layout_width="13dp"
             android:layout_height="13dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.115"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.407">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/ch3icon3"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.314"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.407">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/ch5icon3"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.407">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/ch7icon3"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginStart="264dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.407">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/ch9icon3"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_marginStart="340dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.407">
