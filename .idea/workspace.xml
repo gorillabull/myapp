@@ -11,8 +11,98 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d58640bd-f827-4805-ae15-3a09b4865005" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/celestialorb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/chaliceoffavor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/darstartrait.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/deathblade.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/demolitiontrait.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/dragonclaw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/forceofnature.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/handofjustice.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/infiltratortrait.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/jeweledgauntlets.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/protectortrait.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/quicksilver.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/rebeltrait.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/redbuff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/shroudstillness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/spatula.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/starguardian.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/swordbreaker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/thiefgloves.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/titanresolve.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/trapclaw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/zekesherald.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/src/main/res/drawable/zzrot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.6.4/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/bundle_manifest/debug/bundle-manifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/bundle_manifest/debug/bundle-manifest/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/dex/debug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/dex/debug/out/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/dex_archive_input_jar_hashes/debug/out" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/dex_archive_input_jar_hashes/debug/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/javac/debug/classes/com/example/android/common/activities/activity2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/javac/debug/classes/com/example/android/common/activities/activity2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/javac/debug/classes/com/example/android/recyclerview/CustomAdapter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/javac/debug/classes/com/example/android/recyclerview/CustomAdapter$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/javac/debug/classes/com/example/android/recyclerview/CustomAdapter$ViewHolder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/javac/debug/classes/com/example/android/recyclerview/CustomAdapter$ViewHolder$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/javac/debug/classes/com/example/android/recyclerview/CustomAdapter$ViewHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/javac/debug/classes/com/example/android/recyclerview/CustomAdapter$ViewHolder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/javac/debug/classes/com/example/android/recyclerview/CustomAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/javac/debug/classes/com/example/android/recyclerview/CustomAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/javac/debug/classes/com/example/android/recyclerview/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/javac/debug/classes/com/example/android/recyclerview/MainActivity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/javac/debug/classes/com/example/android/recyclerview/RecyclerViewFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/javac/debug/classes/com/example/android/recyclerview/RecyclerViewFragment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/project_dex_archive/debug/out/com/example/android/common/activities/activity2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/project_dex_archive/debug/out/com/example/android/common/activities/activity2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/project_dex_archive/debug/out/com/example/android/recyclerview/CustomAdapter$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/project_dex_archive/debug/out/com/example/android/recyclerview/CustomAdapter$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/project_dex_archive/debug/out/com/example/android/recyclerview/CustomAdapter$ViewHolder$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/project_dex_archive/debug/out/com/example/android/recyclerview/CustomAdapter$ViewHolder$1.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/project_dex_archive/debug/out/com/example/android/recyclerview/CustomAdapter$ViewHolder.dex" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/project_dex_archive/debug/out/com/example/android/recyclerview/CustomAdapter$ViewHolder.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/project_dex_archive/debug/out/com/example/android/recyclerview/CustomAdapter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/project_dex_archive/debug/out/com/example/android/recyclerview/CustomAdapter.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/project_dex_archive/debug/out/com/example/android/recyclerview/MainActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/project_dex_archive/debug/out/com/example/android/recyclerview/MainActivity.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/project_dex_archive/debug/out/com/example/android/recyclerview/RecyclerViewFragment.dex" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/project_dex_archive/debug/out/com/example/android/recyclerview/RecyclerViewFragment.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/runtime_symbol_list/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/runtime_symbol_list/debug/R.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/intermediates/symbol_list_with_package_name/debug/package-aware-r.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build/outputs/apk/debug/Application-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build/outputs/apk/debug/Application-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/common/activities/MainActTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/common/activities/MainActTwo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/recyclerview/CustomAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/recyclerview/CustomAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/java/com/example/android/recyclerview/ItemBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/com/example/android/recyclerview/ItemBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/CelestialOrb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/ChaliceofFavor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/DarkStarsHeart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/Deathblade.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/DemolitionistsCharge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/DragonsClaw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/ForceofNature.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/HandofJustice.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/InfiltratorsTalons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/JeweledGauntlet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/ProtectorsChestguard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/Quicksilver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/RebelMedal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/RedBuff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/ShroudofStillness.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/Spatula.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/StarGuardiansCharm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/SwordBreaker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/ThiefsGloves.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/TitansResolve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/TrapClaw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/ZekesHerald.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/drawable/ZzRotPortal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/res/layout/am_two.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/res/layout/am_two.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +110,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_26" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="6bad9a90" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -57,7 +147,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="LGL322DL41d6a70" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-04-06T23:49:33.187Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-04-09T01:19:11.169Z" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/Application/src/main/res/drawable" />
@@ -276,24 +366,19 @@
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/recyclerview/CustomAdapter.java</url>
-          <line>854</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/recyclerview/CustomAdapter.java</url>
-          <line>1039</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/recyclerview/CustomAdapter.java</url>
-          <line>1041</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/recyclerview/GraphViewScreenPager.java</url>
           <line>309</line>
           <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/recyclerview/ChampBase.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Application/src/main/java/com/example/android/common/activities/MainActTwo.java</url>
+          <line>1015</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

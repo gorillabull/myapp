@@ -36,4 +36,8 @@ public class ItemBase {
         return recipe2_InternalId;
     }
 
+    public int getRarity(){
+        return 0;
+    }
+
 }

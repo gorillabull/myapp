@@ -9,6 +9,8 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
@@ -29,6 +31,8 @@ import android.widget.Toast;
 import com.example.android.recyclerview.ChampBase;
 import com.example.android.recyclerview.ChampStatsAxisFormatter;
 import com.example.android.recyclerview.CustomAdapter;
+import com.example.android.recyclerview.ItemBase;
+import com.example.android.recyclerview.ItemBuilderSet;
 import com.example.android.recyclerview.R;
 import com.example.android.recyclerview.RadarGraphActivity;
 import com.example.android.recyclerview.RecyclerViewFragment;
@@ -65,6 +69,7 @@ import com.example.android.recyclerview.Fill;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 import androidx.viewpager2.widget.ViewPager2.Orientation;
@@ -78,7 +83,7 @@ import com.nightonke.boommenu.BoomButtons.OnBMClickListener;
 import com.nightonke.boommenu.BoomMenuButton;
 
 public class MainActTwo extends FragmentActivity implements
-        OnChartValueSelectedListener {
+        OnChartValueSelectedListener{
     private BarChart chart;
     private ImageView imageView1;
     private ImageView imageView2;
@@ -89,7 +94,7 @@ public class MainActTwo extends FragmentActivity implements
 
 
     private ImageView [] champ_slots;
-
+    private ImageView [] itemSlotsForChamps;
     private ChampBase iconsDb;
 
     protected Typeface tfRegular;
@@ -100,7 +105,10 @@ public class MainActTwo extends FragmentActivity implements
     private Integer []  subFamilySets;
     private Integer []  familySetBonusCount;
 
-
+    /**
+     * Keeps track of which view the user is currently on (item or champ)
+     */
+    private Integer     viewSelectedState;
 
 
     private final  int BLADEMASTER =1;
@@ -141,7 +149,10 @@ public class MainActTwo extends FragmentActivity implements
 
     private BoomMenuButton boomMenuButtonNav;
 
+    private FirstFragment firstFragment;
+    private SecondFragment secondFragment;
 
+    private Integer champSelectedForItems;
 
     @Override
     protected  void onCreate(Bundle savedInstanceState){
@@ -149,6 +160,9 @@ public class MainActTwo extends FragmentActivity implements
         setContentView(R.layout.am_two  );
 
         champ_slots = new ImageView[10];
+        itemSlotsForChamps = new ImageView[30]; //3 items per champ
+
+
         emptySlots = new Stack<>()  ;
 
         champsAdded = new Stack<>();
@@ -167,6 +181,7 @@ public class MainActTwo extends FragmentActivity implements
         subFamilySets = new Integer[22];
         familySetBonusCount = new Integer[22];
 
+        viewSelectedState = 0;
         for (int i=0; i<22; i++){
             familySetBonusCount[i] =0;
             familySets[i] =0;
@@ -193,6 +208,11 @@ public class MainActTwo extends FragmentActivity implements
         champ_slots[8] = (ImageView)findViewById(R.id.imageView12);
         champ_slots[9] = (ImageView)findViewById(R.id.imageView13);
 
+        //-------------------
+        itemSlotsForChamps[0] = (ImageView)findViewById(R.id.ch1icon1);
+        itemSlotsForChamps[1] = (ImageView)findViewById(R.id.ch1icon2);
+        itemSlotsForChamps[2] = (ImageView)findViewById(R.id.ch1icon3);
+
 
         for(int i=0 ; i < champ_slots.length; i++){
             champ_slots[i].setImageResource(R.drawable.black_background);
@@ -206,17 +226,35 @@ public class MainActTwo extends FragmentActivity implements
             champ_slots[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //clear it
-                     v = (ImageView)v;
-                     int tag = (Integer)v.getTag();                                               //get the tag of the display box image
-                     if (!emptySlots.contains(tag)){
-                         ((ImageView) v).setImageResource(R.drawable.black_background);
-                         emptySlots.push((Integer)v.getTag());//recycle the empty slot
-                         //clear the icon from storage so it can appear again
-                         champsClicked.removeByDisplayId(tag);
+                    v = (ImageView) v;
+                    int tag = (Integer) v.getTag();
 
-                     }
+                    //first check which recycler were on
+                    if (viewSelectedState == 1) {
+                        //in this case, we only select the champ to be assigned items
+                        //check if the veiw has a champ in it.
+                        if (!emptySlots.contains(tag)) {
+                            for (int i = 0; i < champ_slots.length; i++) {
+                                champ_slots[i].setAlpha(0.5f);
+                            }
 
+                            champ_slots[tag].setAlpha(1f);
+                            champSelectedForItems = tag;
+                        }
+                        return;
+                    }
+                    if (viewSelectedState == 0) {
+                        //clear it
+                        //get the tag of the display box image
+                        if (!emptySlots.contains(tag)) {
+                            ((ImageView) v).setImageResource(R.drawable.black_background);
+                            emptySlots.push((Integer) v.getTag());//recycle the empty slot
+                            //clear the icon from storage so it can appear again
+                            champsClicked.removeByDisplayId(tag);
+
+                        }
+
+                    }
                 }
             });
         }
@@ -305,7 +343,65 @@ public class MainActTwo extends FragmentActivity implements
         viewPager2.setPageTransformer(new ZoomOutPageTransformer());
         pagerAdapter= new ScreenSlidePagerAdapter(this);
         viewPager2.setAdapter(pagerAdapter);
+        
+        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                super.onPageScrolled(position, positionOffset, positionOffsetPixels);
+            }
 
+            /**
+             * Invoked when the user scrolls to the next or previous pane.
+             * @param position
+             */
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                viewSelectedState = position;
+
+                if (viewSelectedState ==0){
+                    onItemsSelector(0);
+
+                    return;
+                }
+                //in this case, heroes selected needs some work.
+                if (viewSelectedState ==1){
+                    onItemsSelector(1);
+                }
+                Toast.makeText(MainActTwo.this, String.valueOf(position), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                super.onPageScrollStateChanged(state);
+            }
+
+            @Override
+            public int hashCode() {
+                return super.hashCode();
+            }
+
+            @Override
+            public boolean equals(@Nullable Object obj) {
+                return super.equals(obj);
+            }
+
+            @Override
+            protected Object clone() throws CloneNotSupportedException {
+                return super.clone();
+            }
+
+            @NonNull
+            @Override
+            public String toString() {
+                return super.toString();
+            }
+
+            @Override
+            protected void finalize() throws Throwable {
+                super.finalize();
+            }
+        });
 
 
         if (savedInstanceState == null){
@@ -357,6 +453,38 @@ public class MainActTwo extends FragmentActivity implements
 
 
     }
+
+    /**
+     * Called when a user selects the items pane on the viewpager.
+     */
+    private void onItemsSelector(int whichPane){
+        //find the view and modify it
+        if (whichPane==1){
+            ConstraintLayout constraintLayout = findViewById(R.id.selectedChampsView);
+            constraintLayout.setBackgroundColor(Color.GREEN);
+
+            //darken the icons except the one which the user has currently selected.
+            for (int i=0 ;i<champ_slots.length;i++){
+                champ_slots[i].setAlpha(0.5f);
+            }
+
+            champ_slots[0].setAlpha(1f);
+
+            return;
+        }
+        if (whichPane==0){
+            ConstraintLayout constraintLayout = findViewById(R.id.selectedChampsView);
+            constraintLayout.setBackgroundColor(Color.parseColor("#525461") );
+
+            //darken the icons except the one which the user has currently selected.
+            for (int i=0 ;i<champ_slots.length;i++){
+                champ_slots[i].setAlpha(1f);
+            }
+
+            champ_slots[0].setAlpha(1f);
+        }
+
+    }
     /**
      * Method in the main activity which is called inside a fragment containing a recyclerview
      * The RW passes an integer coressponding to the id of the champion the user has selected by
@@ -365,6 +493,7 @@ public class MainActTwo extends FragmentActivity implements
      */
     public void RecyclerViewChampions_OnClick(int a, ChampBase champBase){
     Toast.makeText(this, String.valueOf(a), Toast.LENGTH_SHORT).show();
+
 
 //  check if theres room        and if the icon is already displayed.
     if (!emptySlots.empty() && !champsClicked.containsChampionId(a)) {
@@ -385,6 +514,19 @@ public class MainActTwo extends FragmentActivity implements
     }else{
         Toast.makeText(this, "Too many champions!", Toast.LENGTH_SHORT).show();
     }
+}
+
+public void RecyclerViewItems_OnClick(int a, ItemBase itemBase){
+    Toast.makeText(this, String.valueOf(a), Toast.LENGTH_SHORT).show();
+
+}
+
+private void setItemForChampInDisplaySlot(int slotid){
+        if (viewSelectedState==1){
+            //somehow insert items and display them for the given view in "slotid"
+
+        }
+
 }
 
     private void calcStats() {
@@ -775,6 +917,8 @@ public class MainActTwo extends FragmentActivity implements
 
     }
 
+
+
     /**
      * A simple pager adapter that represents 5 ScreenSlidePageFragment objects, in
      * sequence.
@@ -784,13 +928,24 @@ public class MainActTwo extends FragmentActivity implements
             super(fa);
         }
 
+
         @Override
         public Fragment createFragment(int position) {
             switch (position) {
                 case 0:
-                    return SecondFragment.newInstance("sldf");
+                    if (secondFragment== null){
+                        secondFragment = SecondFragment.newInstance("abc");
+                        return secondFragment;
+                    }else   {
+                        return secondFragment;
+                    }
                 case 1:
-                    return  FirstFragment.newInstance("bla");
+                    if (firstFragment== null){
+                        firstFragment = FirstFragment.newInstance("abc");
+                        return firstFragment;
+                    }else   {
+                        return firstFragment;
+                    }
                 case 3:
                     return new Fragment();
                 default:
@@ -808,21 +963,114 @@ public class MainActTwo extends FragmentActivity implements
     }
 
     public  static class FirstFragment extends Fragment {
+        private static final String TAG = "RecyclerViewFragment";
+        private static final String KEY_LAYOUT_MANAGER = "layoutManager";
+        private static final int SPAN_COUNT = 4;
+        private static final int DATASET_COUNT = 60;
 
+        private enum LayoutManagerType {
+            GRID_LAYOUT_MANAGER,
+            LINEAR_LAYOUT_MANAGER
+        }
+
+        protected LayoutManagerType mCurrentLayoutManagerType;
+
+        protected RadioButton mLinearLayoutRadioButton;
+        protected RadioButton mGridLayoutRadioButton;
+
+        protected RecyclerView mRecyclerView;
+        protected CustomAdapter mAdapter;
+        protected RecyclerView.LayoutManager mLayoutManager;
+        protected String[] mDataset;
+        protected BoomMenuButton boomMenuButton ;
+        private int hello ;
 
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View v = inflater.inflate(R.layout.radar_markerview, container, false);
+            View rootView = inflater.inflate(R.layout.info_recyler_frag,container,false);
+            rootView.setTag(TAG);
+
+            mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView2);
+
+            mLayoutManager= new LinearLayoutManager(getActivity());
+            mCurrentLayoutManagerType =LayoutManagerType.LINEAR_LAYOUT_MANAGER;
+
+            if (savedInstanceState != null){
+                mCurrentLayoutManagerType = (LayoutManagerType)savedInstanceState
+                        .getSerializable(KEY_LAYOUT_MANAGER);
+
+            }
+            setRecyclerViewLayoutManager(mCurrentLayoutManagerType);
+            ArrayList<Object> items3 = new ArrayList<>();
+
+            items3.add(new ItemBuilderSet());
+            items3.add(new ItemBuilderSet());
+            items3.add(new ItemBuilderSet());
+            items3.add(new ItemBuilderSet());
+            items3.add(new ItemBuilderSet());
+            items3.add(new ItemBuilderSet());
+            items3.add(new ItemBuilderSet());
 
 
-            return v;
+            Object main = getActivity();
+            main = (MainActTwo ) main;
+
+            mAdapter = new CustomAdapter(getContext(), items3, main, 123);
+            //set custom adapter
+            mRecyclerView.setAdapter(mAdapter);
+
+
+            return rootView;
         }
 
         public void onViewCreated(@NonNull View view, Bundle savedInstanceState){
             super.onViewCreated(view, savedInstanceState);
 
         }
+        public void setRecyclerViewLayoutManager(LayoutManagerType layoutManagerType) {
+            int scrollPosition = 0;
+
+            // If a layout manager has already been set, get current scroll position.
+            if (mRecyclerView.getLayoutManager() != null) {
+                scrollPosition = ((LinearLayoutManager) mRecyclerView.getLayoutManager())
+                        .findFirstCompletelyVisibleItemPosition();
+            }
+
+            switch (layoutManagerType) {
+                case GRID_LAYOUT_MANAGER:
+                    mLayoutManager = new GridLayoutManager(getActivity(), SPAN_COUNT);
+                    mCurrentLayoutManagerType = LayoutManagerType.GRID_LAYOUT_MANAGER;
+                    break;
+                case LINEAR_LAYOUT_MANAGER:
+                    mLayoutManager = new LinearLayoutManager(getActivity());
+                    mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
+                    break;
+                default:
+                    mLayoutManager = new LinearLayoutManager(getActivity());
+                    mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
+            }
+
+            mRecyclerView.setLayoutManager(mLayoutManager);
+            mRecyclerView.scrollToPosition(scrollPosition);
+        }
+
+
+        @Override
+        public void onSaveInstanceState(Bundle savedInstanceState) {
+            // Save currently selected layout manager.
+            savedInstanceState.putSerializable(KEY_LAYOUT_MANAGER, mCurrentLayoutManagerType);
+            super.onSaveInstanceState(savedInstanceState);
+        }
+
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item){
+            Intent myIntent = new Intent(getContext(), RecyclerViewFragment.class);
+            startActivityForResult(myIntent, 0);
+            return true;
+        }
+
+
         public static FirstFragment newInstance(String text) {
 
             FirstFragment f = new FirstFragment();
@@ -879,6 +1127,8 @@ public class MainActTwo extends FragmentActivity implements
             super.onCreate(sis);
 
         }
+
+
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle
@@ -1051,6 +1301,18 @@ public class MainActTwo extends FragmentActivity implements
             }
             return false;
         }
+
+        //index 0 to 9
+        public boolean isSlotFilled(int slotid){
+            for (int i =0; i <arrayList.size(); i++){
+                if (arrayList.get(i).champId == slotid){
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
         public void removeByDisplayId(int id){
             for (int i =0; i<arrayList.size();i++){
                 if (arrayList.get(i).dispId==id){
