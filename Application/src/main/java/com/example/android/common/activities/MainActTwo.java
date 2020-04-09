@@ -53,6 +53,7 @@ import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
@@ -112,7 +113,7 @@ public class MainActTwo extends FragmentActivity implements
     private Integer     viewSelectedState;
 
 
-    private final  int BLADEMASTER =1;
+    private final int BLADEMASTER =1;
     private final int BLASTER = 2;
     private final int BRAWLER = 3;
     private final int CELESTIAL = 4;
@@ -134,6 +135,14 @@ public class MainActTwo extends FragmentActivity implements
     private final int VALKYRIA = 19;
     private final int VANGUARD = 20;
     private final int VOID =    21;
+
+    private final int chart_HEALTH_MAX = 2000;
+    private final int chart_ATTACK_MAX = 150;
+    private final int chart_ARMOR = 60;
+    private final int chart_SPELLRES = 20 ;
+
+
+    private ArrayList<ArrayList<Integer>> traitBonuses;
 
     private PopupWindow popupWindow;
     LinearLayout popupLayout;
@@ -191,6 +200,13 @@ public class MainActTwo extends FragmentActivity implements
             subFamilySets[i] = 0;
         }
 
+traitBonuses = new ArrayList<>();
+        Integer [] blademastertraits = new Integer[3];
+        blademastertraits[0] = 0;
+        blademastertraits[1] = 2;
+        blademastertraits[2] = 3;
+
+        traitBonuses    .add(new ArrayList<>(Arrays.asList(blademastertraits)));
 
        // ActionBar actionBar = getActionBar();
        // actionBar.setDisplayHomeAsUpEnabled(false   );
@@ -583,6 +599,7 @@ public class MainActTwo extends FragmentActivity implements
     Toast.makeText(this, String.valueOf(a), Toast.LENGTH_SHORT).show();
     int idx = champSelectedForItems *3 ;
 
+    //0, 3, 5, 7... 24, 27
     int temp = slotCounterArray.get(champSelectedForItems);
     idx += temp;
     temp++;
@@ -638,6 +655,8 @@ private void setItemForChampInDisplaySlot(int slotid){
             switch (i){
                 case BLADEMASTER:
                     if ( familySets[i] >=3  ){
+                        familySetBonusCount[i] = traitBonuses.get(i).get(familySets[i]/3);
+
                         familySetBonusCount[i] = familySets[i] /3; //3 or 6 (1 or 2 )
                     }
                     break;
